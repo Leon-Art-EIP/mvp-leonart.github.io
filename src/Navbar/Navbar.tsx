@@ -8,8 +8,8 @@ export default function Navbar() {
     <NavbarWrapper>
       <StyledCol borderColor="black">
         <StyledLogoRow align="middle">
-          <img alt="logo" src={logo}></img>
-          <img alt="text" src={text}></img>
+          <StyledImg alt="logo" src={logo}></StyledImg>
+          <StyledImg alt="text" src={text}></StyledImg>
         </StyledLogoRow>
       </StyledCol>
       <StyledCol borderColor="grey" flex="auto">
@@ -44,6 +44,10 @@ const StyledLogoRow = styled(Row)`
   padding: 20px;
 `;
 
+const StyledImg = styled.img`
+  margin: 5px;
+`;
+
 const StyledSloganRow = styled(Row)`
   width: 100%;
   height: 100%;
@@ -51,6 +55,6 @@ const StyledSloganRow = styled(Row)`
 
 const StyledSlogan = styled.div`
   color: green;
-  font-family: "Montserrat", sans-serif;
-  font-size: x-large;
+  font-family: "Lobster", cursive;
+  font-size: xx-large;
 `;
