@@ -12,7 +12,13 @@ export default function Navbar() {
           <img alt="text" src={text}></img>
         </StyledLogoRow>
       </StyledCol>
-      <StyledCol borderColor="grey" flex="auto"></StyledCol>
+      <StyledCol borderColor="grey" flex="auto">
+        <StyledSloganRow align="middle" justify="center">
+          <StyledSlogan>
+            Ça va se vendre comme des petits peintres !
+          </StyledSlogan>
+        </StyledSloganRow>
+      </StyledCol>
       <StyledCol borderColor="white" span={6}></StyledCol>
     </NavbarWrapper>
   );
@@ -28,11 +34,23 @@ const NavbarWrapper = styled(Row)`
 `;
 
 const StyledCol = styled(Col)<{ borderColor: string }>`
-  border: solid;
-  border-color: ${(props) => props.borderColor};
+  /* border: solid; */
+  /* border-color: ${(props) => props.borderColor}; */
   min-height: 100%;
 `;
 
 const StyledLogoRow = styled(Row)`
   min-height: 100%;
+  padding: 20px;
+`;
+
+const StyledSloganRow = styled(Row)`
+  width: 100%;
+  height: 100%;
+`;
+
+const StyledSlogan = styled.div`
+  color: green;
+  font-family: "Montserrat", sans-serif;
+  font-size: x-large;
 `;
