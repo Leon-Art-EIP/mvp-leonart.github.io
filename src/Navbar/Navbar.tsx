@@ -2,24 +2,30 @@ import { Row, Col } from "antd";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import text from "../assets/Leonart.svg";
+import { Link } from "react-router-dom";
+import { MailOutlined } from "@ant-design/icons";
 
 export default function Navbar() {
   return (
     <NavbarWrapper>
-      <StyledCol borderColor="black">
+      <StyledCol>
         <StyledLogoRow align="middle">
-          <img alt="logo" src={logo}></img>
-          <img alt="text" src={text}></img>
+          <Link to="/">
+            <StyledImg alt="logo" src={logo}></StyledImg>
+            <StyledImg alt="text" src={text}></StyledImg>
+          </Link>
         </StyledLogoRow>
       </StyledCol>
-      <StyledCol borderColor="grey" flex="auto">
-        <StyledSloganRow align="middle" justify="center">
-          <StyledSlogan>
-            Ça va se vendre comme des petits peintres !
-          </StyledSlogan>
-        </StyledSloganRow>
+      <StyledCol flex="auto"></StyledCol>
+      <StyledCol span={6}>
+        <StyledMailRow align="middle" justify="center">
+          <Link to="/messagerie">
+            <StyledButtonDiv>
+              <StyledMailOutlinedLogo />
+            </StyledButtonDiv>
+          </Link>
+        </StyledMailRow>
       </StyledCol>
-      <StyledCol borderColor="white" span={6}></StyledCol>
     </NavbarWrapper>
   );
 }
@@ -33,9 +39,7 @@ const NavbarWrapper = styled(Row)`
   border-bottom-width: 1px;
 `;
 
-const StyledCol = styled(Col)<{ borderColor: string }>`
-  /* border: solid; */
-  /* border-color: ${(props) => props.borderColor}; */
+const StyledCol = styled(Col)`
   min-height: 100%;
 `;
 
@@ -44,13 +48,25 @@ const StyledLogoRow = styled(Row)`
   padding: 20px;
 `;
 
-const StyledSloganRow = styled(Row)`
-  width: 100%;
-  height: 100%;
+const StyledImg = styled.img`
+  margin: 5px;
 `;
 
-const StyledSlogan = styled.div`
-  color: green;
-  font-family: "Montserrat", sans-serif;
-  font-size: x-large;
+const StyledMailRow = styled(Row)`
+  min-height: 100%;
+`;
+
+const StyledMailOutlinedLogo = styled(MailOutlined)`
+  font-size: 40px;
+`;
+
+const StyledButtonDiv = styled.div`
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #454545;
+  :hover {
+    background: green;
+    cursor: pointer;
+    color: white;
+  }
 `;

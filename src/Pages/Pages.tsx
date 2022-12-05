@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home/Home";
+import Messagerie from "./Messagerie/Messagerie";
 
 export default function Pages() {
   return (
@@ -15,10 +16,6 @@ export default function Pages() {
 
 function Profil() {
   return <div>Mon profil</div>
-}
-
-function Messagerie() {
-  return <div>Messagerie</div>
 }
 
 function Reseaux() {
