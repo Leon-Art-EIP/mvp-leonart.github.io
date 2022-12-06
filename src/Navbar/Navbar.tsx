@@ -10,7 +10,7 @@ export default function Navbar() {
     <NavbarWrapper>
       <StyledCol>
         <StyledLogoRow align="middle">
-          <Link to="/">
+          <Link to="/mvp-leonart.github.io">
             <StyledImg alt="logo" src={logo}></StyledImg>
             <StyledImg alt="text" src={text}></StyledImg>
           </Link>
