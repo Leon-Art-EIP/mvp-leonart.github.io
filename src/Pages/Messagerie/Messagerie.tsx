@@ -1,44 +1,26 @@
 import styled from "styled-components";
-import { Row, Col } from "antd";
+import { Row } from "antd";
+import Message from "./Message";
+
+interface Msg {
+  width: string;
+}
 
 export default function Messagerie() {
+  const messages: Msg[] = [
+    { width: "400px" },
+    { width: "200px" },
+    { width: "100px" },
+    { width: "200px" },
+    { width: "500px" },
+    { width: "100px" },
+  ];
+
   return (
     <StyledRow>
-      <StyledCol width="400px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
-      <StyledCol width="200px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
-      <StyledCol width="100px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
-      <StyledCol width="300px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
-      <StyledCol width="200px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
-      <StyledCol width="500px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
-      <StyledCol width="100px" flex="auto">
-        <StyledRow align="middle" justify="center">
-          <div>message</div>
-        </StyledRow>
-      </StyledCol>
+      {messages.map((message) => {
+        return <Message width={message.width}></Message>;
+      })}
     </StyledRow>
   );
 }
@@ -46,12 +28,4 @@ export default function Messagerie() {
 const StyledRow = styled(Row)`
   width: 100%;
   height: 100%;
-`;
-
-const StyledCol = styled(Col)<{ width: string }>`
-  height: 50px;
-  margin: 10px 6px 0 6px;
-  background: #d8f3dc;
-  border-radius: 10px;
-  min-width: ${(props) => props.width};
 `;
