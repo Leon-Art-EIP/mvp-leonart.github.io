@@ -49,6 +49,8 @@ export default function Navbar() {
 }
 
 const NavbarWrapper = styled(Row)`
+  position: absolute;
+  z-index: 1;
   background: #f5f5f5bf;
   min-height: 80px;
   width: 100%;
@@ -98,10 +100,13 @@ const StyledButton = styled.div<{ color: string; background: string }>`
   background: ${(props) => props.background};
   color: ${(props) => props.color};
   border-radius: 20px;
+  transition: all 0.1s ease-in-out;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(-2px -2px 4px #ffffff);
   :hover {
     cursor: pointer;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25))
+      drop-shadow(-1px -1px 1px #ffffff);
   }
 `;
 
