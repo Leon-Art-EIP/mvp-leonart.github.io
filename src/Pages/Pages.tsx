@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home/Home";
 import Messagerie from "./Messagerie/Messagerie";
+import Login from "./Login/Login";
 
 export default function Pages() {
   return (
@@ -10,12 +11,13 @@ export default function Pages() {
       <Route path="/messagerie" element={<Messagerie />} />
       <Route path="/reseaux" element={<Reseaux />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }
 
 function Profil() {
-  return <div>Mon profil</div>
+  return <div>Mon profil</div>;
 }
 
 function Reseaux() {
@@ -23,5 +25,5 @@ function Reseaux() {
 }
 
 function Contact() {
-  return <div>leonart@epitech.eu</div>
+  return <div>leonart@epitech.eu</div>;
 }

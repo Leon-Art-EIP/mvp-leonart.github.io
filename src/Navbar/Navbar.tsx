@@ -1,56 +1,107 @@
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
-import text from "../assets/Leonart.svg";
 import { Link } from "react-router-dom";
-import { MailOutlined } from "@ant-design/icons";
+// import { MailOutlined } from "@ant-design/icons";
 
 export default function Navbar() {
   return (
     <NavbarWrapper>
-      <StyledCol>
-        <StyledLogoRow align="middle">
-          <Link to="/mvp-leonart.github.io">
-            <StyledImg alt="logo" src={logo}></StyledImg>
-            <StyledImg alt="text" src={text}></StyledImg>
-          </Link>
-        </StyledLogoRow>
+      <StyledCol span={8}>
+        <FullRow align="middle">
+          <Col>
+            <Link to="/mvp-leonart.github.io">
+              <StyledImg alt="logo" src={logo}></StyledImg>
+            </Link>
+          </Col>
+          <Col flex="auto"></Col>
+        </FullRow>
       </StyledCol>
-      <StyledCol flex="auto"></StyledCol>
-      <StyledCol span={6}>
-        <StyledMailRow align="middle" justify="center">
-          <Link to="/messagerie">
-            <StyledButtonDiv>
-              <StyledMailOutlinedLogo />
-            </StyledButtonDiv>
+      <StyledCol span={8}>
+        <FullRow align="middle" justify="center">
+          <Link to="/mvp-leonart.github.io">
+            <StyledLeonart>
+              <StyledLeon>Leon</StyledLeon>
+              <StyledArt>'Art</StyledArt>
+            </StyledLeonart>
           </Link>
-        </StyledMailRow>
+        </FullRow>
+      </StyledCol>
+      <StyledCol span={8}>
+        <FullRow>
+          <Col flex="auto"></Col>
+          <Col>
+            <FullRow align="middle">
+              <StyledButton color="#FFFFFF" background="#2D6A4F">
+                S'inscrire
+              </StyledButton>
+              <StyledButton color="#52B788" background="#F5F5F5">
+                Se connecter
+              </StyledButton>
+            </FullRow>
+          </Col>
+        </FullRow>
       </StyledCol>
     </NavbarWrapper>
   );
 }
 
 const NavbarWrapper = styled(Row)`
-  background: #d8f3dc;
+  background: #f5f5f5bf;
   min-height: 80px;
   width: 100%;
-  border-bottom: solid;
-  border-bottom-color: white;
-  border-bottom-width: 1px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
 `;
 
 const StyledCol = styled(Col)`
   min-height: 100%;
+  width: 100%;
+  /* border: solid;
+  border-color: red;
+  border-width: 1px; */
 `;
 
-const StyledLogoRow = styled(Row)`
-  min-height: 100%;
-  padding: 20px;
+const FullRow = styled(Row)`
+  width: 100%;
+  height: 100%;
+`;
+
+const StyledLeonart = styled.div`
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+`;
+
+const StyledLeon = styled.u`
+  text-decoration: none;
+  color: #2d6a4f;
+`;
+
+const StyledArt = styled.u`
+  text-decoration: none;
+  color: #2e2e2e;
 `;
 
 const StyledImg = styled.img`
-  margin: 5px;
+  margin-left: 10px;
 `;
+
+const StyledButton = styled.div<{ color: string; background: string }>`
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 20px;
+  margin-right: 20px;
+  background: ${(props) => props.background};
+  color: ${(props) => props.color};
+  border-radius: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(-2px -2px 4px #ffffff);
+`;
+
+/*
+pour Messagerie :
 
 const StyledMailRow = styled(Row)`
   min-height: 100%;
@@ -70,3 +121,4 @@ const StyledButtonDiv = styled.div`
     color: white;
   }
 `;
+*/
