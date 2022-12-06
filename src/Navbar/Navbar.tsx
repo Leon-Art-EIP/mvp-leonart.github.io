@@ -35,9 +35,11 @@ export default function Navbar() {
               <StyledButton color="#FFFFFF" background="#2D6A4F">
                 S'inscrire
               </StyledButton>
-              <StyledButton color="#52B788" background="#F5F5F5">
-                Se connecter
-              </StyledButton>
+              <Link to="/login">
+                <StyledButton color="#52B788" background="#F5F5F5">
+                  Se connecter
+                </StyledButton>
+              </Link>
             </FullRow>
           </Col>
         </FullRow>
@@ -98,6 +100,9 @@ const StyledButton = styled.div<{ color: string; background: string }>`
   border-radius: 20px;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(-2px -2px 4px #ffffff);
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 /*
