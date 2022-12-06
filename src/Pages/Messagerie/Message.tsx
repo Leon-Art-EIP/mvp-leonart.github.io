@@ -1,16 +1,39 @@
 import styled from "styled-components";
-import { Row, Col } from "antd";
+import { Row, Col, Modal } from "antd";
+import { useState } from "react";
 
 interface PropsMessage {
   width: string;
 }
 
 export default function Message(props: PropsMessage) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <StyledCol width={props.width} flex="auto">
-      <StyledRow align="middle" justify="center">
-        <div>message</div>
+      <StyledRow align="middle" justify="center" onClick={showModal}>
+        <>message</>
       </StyledRow>
+      <Modal
+        title="Message Modal"
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+      >
+        <p>Pour l'instant y a rien...</p>
+      </Modal>
     </StyledCol>
   );
 }
@@ -26,4 +49,8 @@ const StyledCol = styled(Col)<{ width: string }>`
   background: #d8f3dc;
   border-radius: 10px;
   min-width: ${(props) => props.width};
+  :hover {
+    background: #9df5aa;
+    cursor: pointer;
+  }
 `;
