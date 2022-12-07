@@ -45,54 +45,12 @@ const StyledCol = styled(Col)`
   /* border: solid;
   border-color: red;
   border-width: 1px; */
-  border: solid;
-  border-width: 1px;
-  border-color: red;
 `;
 
 const FullRow = styled(Row)`
   width: 100%;
   height: 100%;
 `;
-
-const StyledLeonart = styled.div`
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 2.5rem;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-`;
-
-const StyledSearchBarText = styled.u`
-  text-decoration: none;
-  color: #9C9C9C;
-`;
-
-const StyledArt = styled.u`
-  text-decoration: none;
-  color: #2e2e2e;
-`;
-
-const StyledImg = styled.img`
-  margin-left: 10px;
-`;
-
-// const StyledButton = styled.div<{ color: string; background: string }>`
-//   font-family: "Montserrat", sans-serif;
-//   padding: 10px 20px;
-//   margin-right: 20px;
-//   background: ${(props) => props.background};
-//   color: ${(props) => props.color};
-//   border-radius: 20px;
-//   transition: all 0.1s ease-in-out;
-//   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
-//     drop-shadow(-2px -2px 4px #ffffff);
-//   :hover {
-//     cursor: pointer;
-//     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25))
-//       drop-shadow(-1px -1px 1px #ffffff);
-//   }
-// `;
 
 const StyledInput = styled.input<{ color: string; background: string}>`
   font-family: "Montserrat", sans-serif;
@@ -110,7 +68,4 @@ const StyledInput = styled.input<{ color: string; background: string}>`
       drop-shadow(-1px -1px 1px #ffffff);
   }
   width: 89%;
-  border: solid;
-  border-width: 1px;
-  border-color: blue;
 `;
