@@ -9,9 +9,7 @@ export default function Login() {
         <SloganRow></SloganRow>
       </Col>
       <Col span={10}>
-        <ConnexionRow align="middle" justify="center">
-          <Connexion></Connexion>
-        </ConnexionRow>
+        <Connexion></Connexion>
       </Col>
     </LoginWrapper>
   );
@@ -26,10 +24,4 @@ const SloganRow = styled(Row)`
   height: 100%;
   width: 100%;
   background: #d8f3dc;
-`;
-
-const ConnexionRow = styled(Row)`
-  height: 100%;
-  width: 100%;
-  background: #f5f5f5;
 `;

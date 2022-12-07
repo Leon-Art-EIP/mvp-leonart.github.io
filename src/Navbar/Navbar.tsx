@@ -32,14 +32,14 @@ export default function Navbar() {
           <Col flex="auto"></Col>
           <Col>
             <FullRow align="middle">
-              <StyledButton color="#FFFFFF" background="#2D6A4F">
-                S'inscrire
-              </StyledButton>
               <Link to="/login">
-                <StyledButton color="#52B788" background="#F5F5F5">
+                <StyledButton color="#FFFFFF" background="#2D6A4F">
                   Se connecter
                 </StyledButton>
               </Link>
+              <StyledButton color="#52B788" background="#F5F5F5">
+                S'inscrire
+              </StyledButton>
             </FullRow>
           </Col>
         </FullRow>
