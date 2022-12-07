@@ -104,6 +104,7 @@ const HalfButton = styled.div<{ color: string; background: string }>`
   }
   text-align: center;
   font-weight: 400;
+  margin-top: 20px;
 `;
 
 const ConnexionRow = styled(Row)`
