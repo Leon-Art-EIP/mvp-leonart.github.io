@@ -17,7 +17,7 @@ export default function Connexion() {
     setTimeout(() => {
       setIsLoading(false);
       setLoggedIn(true);
-      navigate("/feed");
+      navigate("/");
     }, 1500);
   }
 
