@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Row } from "antd";
+import Searchbar from "./../../Searchbar/Searchbar";
 
 export default function Feed() {
   return (
     <StyledRow>
-
+      <Searchbar />
     </StyledRow>
   );
 }

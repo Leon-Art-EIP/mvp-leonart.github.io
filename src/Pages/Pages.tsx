@@ -23,3 +23,4 @@ export default function Pages() {
 function Profil() {
   return <div>Mon profil</div>;
 }
+
