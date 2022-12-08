@@ -37,9 +37,11 @@ export default function Navbar() {
                   Se connecter
                 </StyledButton>
               </Link>
-              <StyledButton color="#52B788" background="#F5F5F5">
-                S'inscrire
-              </StyledButton>
+              <Link to="/register">
+                <StyledButton color="#52B788" background="#F5F5F5">
+                  S'inscrire
+                </StyledButton>
+              </Link>
             </FullRow>
           </Col>
         </FullRow>

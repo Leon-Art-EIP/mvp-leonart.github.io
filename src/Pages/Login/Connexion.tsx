@@ -11,7 +11,7 @@ export default function Connexion() {
       <CenteredDiv>
         <Title>Connexion</Title>
         <FullInput placeholder="Nom d'utilisateur"></FullInput>
-        <FullInput placeholder="Mot de passe"></FullInput>
+        <FullInput placeholder="Mot de passe" type="password"></FullInput>
         <FullRow>
           <Col span={11}>
             <HalfButton color="#468367" background="#F5F5F5">
@@ -26,7 +26,7 @@ export default function Connexion() {
           </Col>
         </FullRow>
         <StyledDiv>
-          Pas encore de compte ? <StyledLink to="/login">S'inscrire</StyledLink>
+          Pas encore de compte ? <StyledLink to="/register">S'inscrire</StyledLink>
         </StyledDiv>
       </CenteredDiv>
     </ConnexionRow>
