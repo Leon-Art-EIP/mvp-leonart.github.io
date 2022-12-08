@@ -4,29 +4,35 @@ import styled from "styled-components";
 
 export default function Register() {
   return (
-    <ConnexionRow align="middle" justify="center">
-      <CenteredDiv>
-        <Title>S'inscrire</Title>
-        <FullInput placeholder="Nom d'utilisateur"></FullInput>
-        <FullInput placeholder="Mot de passe"></FullInput>
-        <FullRow>
-          <Col span={11}>
-            <HalfButton color="#468367" background="#F5F5F5">
-              Mot de passe oublié ?
-            </HalfButton>
-          </Col>
-          <Col flex="auto"></Col>
-          <Col span={11}>
-            <HalfButton color="#FFFFFF" background="#2D6A4F">
-              Se connecter
-            </HalfButton>
-          </Col>
-        </FullRow>
-        <StyledDiv>
-          Pas encore de compte ? <StyledLink to="/login">S'inscrire</StyledLink>
-        </StyledDiv>
-      </CenteredDiv>
-    </ConnexionRow>
+    <FullRow align="middle" justify="center">
+      <StyledCol span={8}>
+        <ConnexionRow align="middle" justify="center">
+          <Title>Inscription</Title>
+          <FullInput placeholder="Nom"></FullInput>
+          <FullInput placeholder="Prénom"></FullInput>
+          <FullInput placeholder="Date de naissance JJ/MM/AAAA"></FullInput>
+          <FullInput placeholder="E-mail"></FullInput>
+          <StyledButton color="#468367" background="#F5F5F5">Se connecter avec Google</StyledButton>
+          <StyledButton color="#FFFFFF" background="#2D6A4F">S' inscrire</StyledButton>
+          {/* <FullRow>
+            <Col span={11}>
+              <HalfButton color="#468367" background="#F5F5F5">
+                Se connecter avec Google
+              </HalfButton>
+            </Col>
+            <Col flex="auto"></Col>
+            <Col span={11}>
+              <HalfButton color="#FFFFFF" background="#2D6A4F">
+                S' inscrire
+              </HalfButton>
+            </Col>
+          </FullRow> */}
+          <StyledDiv>
+            Vous avez déjà un compte ? <StyledLink to="/login">Se connecter</StyledLink>
+          </StyledDiv>
+        </ConnexionRow>
+      </StyledCol>
+    </FullRow>
   );
 }
 
@@ -62,6 +68,7 @@ const Title = styled.div`
   font-size: 25px;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 100px;
 `;
 
 const FullInput = styled.input`
@@ -85,9 +92,23 @@ const FullInput = styled.input`
   }
 `;
 
-const HalfButton = styled.div<{ color: string; background: string }>`
+const ConnexionRow = styled(Row)`
+  position: relative;
+  height: 100%;
+  width: 100%;
+  pargin-top = 100px;
+  background: #f5f5f5;
+`;
+
+const StyledCol = styled(Col)`
+  min-height: 100%;
+  width: 100%;
+`;
+
+const StyledButton = styled.div<{ color: string; background: string }>`
   font-family: "Montserrat", sans-serif;
   padding: 10px 20px;
+  margin-right: 20px;
   background: ${(props) => props.background};
   color: ${(props) => props.color};
   border-radius: 20px;
@@ -100,14 +121,7 @@ const HalfButton = styled.div<{ color: string; background: string }>`
       drop-shadow(-1px -1px 1px #ffffff);
   }
   text-align: center;
-  font-weight: 400;
-  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width = 100%;
 `;
-
-const ConnexionRow = styled(Row)`
-  height: 100%;
-  width: 100%;
-  background: #f5f5f5;
-`;
-
-const CenteredDiv = styled.div``;
