@@ -14,8 +14,8 @@ import Star from "./assets/star";
 
 const useStyles = makeStyles(() => ({
   root: {
-    maxWidth: 304,
-    width: 400,
+    maxWidth: 504,
+    width: 600,
     margin: "auto",
     boxShadow: "none",
     borderRadius: 30
@@ -62,7 +62,7 @@ export const NewsCardDemo = React.memo(function NewsCard() {
       <CardMedia
         classes={mediaStyles}
         image={
-          "https://images.unsplash.com/photo-1468774871041-fc64dd5522f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80"
+          "https://img.freepik.com/premium-photo/trendy-modern-artwork-contemporary-art-collage-sport-office-concept_489646-20518.jpg?w=1800"
         }
       />
       <CardContent className={styles.content}>
@@ -79,13 +79,13 @@ export const NewsCardDemo = React.memo(function NewsCard() {
         <TextInfoContent
           classes={textCardContentStyles}
           //overline={"March 20, 2019"}
-          heading={"What happened in Thailand?"}
+          heading={"La danse du feu dans la nuit"}
           body={
-            "Kayaks crowd Three Sisters Springs, where people and manatees maintain controversial coexistence."
+            "En créant cette oeuvre, j'ai voulu montrer tout le potentiel du feu lorsqu'il est présent dans son élément contraire, le bleu froid profond"
           }
         />
         <Button color={"primary"} fullWidth className={styles.cta}>
-          Find Out More <ChevronRightRounded />
+          Découvrir l'oeuvre <ChevronRightRounded />
         </Button>
       </CardContent>
     </Card>
