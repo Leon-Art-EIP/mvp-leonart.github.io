@@ -5,6 +5,7 @@ import Feed from "./Feed/Feed";
 import Publier from "./Publier/Publier";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
+import Profil from "./Profil/Profil";
 
 export default function Pages() {
   return (
@@ -18,9 +19,5 @@ export default function Pages() {
       <Route path="/profil" element={<Profil />} />
     </Routes>
   );
-}
-
-function Profil() {
-  return <div>Mon profil</div>;
 }
 
