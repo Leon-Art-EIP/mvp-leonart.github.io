@@ -17,7 +17,7 @@ export default function Connexion() {
     setTimeout(() => {
       setIsLoading(false);
       setLoggedIn(true);
-      navigate("/mvp-leonart.github.io");
+      navigate("/feed");
     }, 1500);
   }
 
