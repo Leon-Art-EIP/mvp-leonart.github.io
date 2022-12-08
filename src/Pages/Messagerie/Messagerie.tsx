@@ -18,7 +18,7 @@ export default function Messagerie() {
   ];
 
   return (
-    <StyledRow>
+    <StyledRow align="middle">
       {messages.map((message) => {
         return <Message key={message.id} width={message.width}></Message>;
       })}
@@ -29,4 +29,5 @@ export default function Messagerie() {
 const StyledRow = styled(Row)`
   width: 100%;
   height: 100%;
+  padding-top: 85px;
 `;

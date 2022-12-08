@@ -13,10 +13,10 @@ export default function Pages() {
       <Route path="/mvp-leonart.github.io" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/feed" element={<Feed />} />
       <Route path="/publier" element={<Publier />} />
       <Route path="/messagerie" element={<Messagerie />} />
       <Route path="/profil" element={<Profil />} />
+      <Route path="/" element={<Feed />} />
     </Routes>
   );
 }

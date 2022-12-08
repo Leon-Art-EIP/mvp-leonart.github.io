@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import { isLoggedIn } from "../SetupRecoil";
@@ -10,11 +10,13 @@ import { useState } from "react";
 export default function LoggedNavbar() {
   const [isLoading, setIsLoading] = useState(false);
   const setLoggedIn = useSetRecoilState(isLoggedIn);
+  const navigate = useNavigate();
   function handleOnClick() {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
       setLoggedIn(false);
+      navigate("/mvp-leonart.github.io");
     }, 1500);
   }
 
@@ -41,16 +43,29 @@ export default function LoggedNavbar() {
       </Col>
       <Col span={8}>
         <FullRow align="middle" justify="center">
-          <Col span={16}>
-            <Row>
-              <Col span={8}>
-                <PageTitle>Profil</PageTitle>
+          <Col span={20}>
+            <Row justify="space-between">
+              <Col>
+                <Link to="/">
+                  <PageTitle current={useLocation().pathname === "/"}>Home</PageTitle>
+                </Link>
               </Col>
-              <Col span={8}>
-                <PageTitle>Publier</PageTitle>
+              <Col>
+                <Link to="/profil">
+                  <PageTitle current={useLocation().pathname === "/profil"}>Profil</PageTitle>
+                </Link>
               </Col>
-              <Col span={8}>
-                <PageTitle>Home</PageTitle>
+              <Col>
+                <Link to="/publier">
+                  <PageTitle current={useLocation().pathname === "/publier"}>
+                    Publier
+                  </PageTitle>
+                </Link>
+              </Col>
+              <Col>
+                <Link to="/messagerie">
+                  <PageTitle current={useLocation().pathname === "/messagerie"}>Messagerie</PageTitle>
+                </Link>
               </Col>
             </Row>
           </Col>
@@ -60,22 +75,20 @@ export default function LoggedNavbar() {
         <FullRow align="middle">
           <Col flex="auto"></Col>
           <Col>
-            <Link to="/mvp-leonart.github.io">
-              <StyledButton
-                color="#52B788"
-                background="#F5F5F5"
-                grey={isLoading}
-                onClick={handleOnClick}
-              >
-                {isLoading && (
-                  <LoadingOutlined
-                    style={{ fontSize: 14, marginRight: "10px" }}
-                    spin
-                  />
-                )}{" "}
-                Déconnexion
-              </StyledButton>
-            </Link>
+            <StyledButton
+              color="#52B788"
+              background="#F5F5F5"
+              grey={isLoading}
+              onClick={handleOnClick}
+            >
+              {isLoading && (
+                <LoadingOutlined
+                  style={{ fontSize: 14, marginRight: "10px" }}
+                  spin
+                />
+              )}{" "}
+              Déconnexion
+            </StyledButton>
           </Col>
         </FullRow>
       </Col>
@@ -121,8 +134,8 @@ const StyledArt = styled.u`
   color: #2e2e2e;
 `;
 
-const PageTitle = styled.div`
-  color: #212121;
+const PageTitle = styled.div<{ current: boolean }>`
+  color: ${(props) => (props.current ? "#2D6A4F" : "#212121")};
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
