@@ -96,8 +96,9 @@ const ConnexionRow = styled(Row)`
   position: relative;
   height: 100%;
   width: 100%;
-  pargin-top = 100px;
   background: #f5f5f5;
+  padding: 20px;
+  border-radius: 25px;
 `;
 
 const StyledCol = styled(Col)`
@@ -123,5 +124,4 @@ const StyledButton = styled.div<{ color: string; background: string }>`
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width = 100%;
 `;
