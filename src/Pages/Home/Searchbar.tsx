@@ -7,8 +7,6 @@ export default function Searchbar() {
       <FullRow align="middle" justify="center">
         <StyledCol span={6}>
           <StyledInput placeholder="Nom d'utilisateur"></StyledInput>
-          {/* <StyledInput type="text" id="searchbar" color="#9C9C9C" background="#F5F5F5" placeholder="Recherche..."> */}
-            {/* </StyledInput> */}
         </StyledCol>
       </FullRow>
     </SearchbarWrapper>

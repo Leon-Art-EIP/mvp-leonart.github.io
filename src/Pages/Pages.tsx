@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home/Home";
 import Messagerie from "./Messagerie/Messagerie";
+import Register from "./Register/Register";
 import Login from "./Login/Login";
 
 export default function Pages() {
@@ -12,6 +13,7 @@ export default function Pages() {
       <Route path="/reseaux" element={<Reseaux />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   );
 }
