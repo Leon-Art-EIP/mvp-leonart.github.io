@@ -5,20 +5,20 @@ interface CardProps {
   marginLeft: string;
   author: string;
   image: string;
-  width: string;
+  height: string;
 }
 
 export default function Card(props: CardProps) {
   return (
     <CardWrapper marginTop={props.marginTop} marginLeft={props.marginLeft}>
       <Title>{props.author}</Title>
-      <StyledImg alt={props.image} src={props.image} width={props.width}></StyledImg>
+      <StyledImg alt={props.image} src={props.image} height={props.height}></StyledImg>
     </CardWrapper>
   );
 }
 
-const StyledImg = styled.img<{ width: string }>`
-  width: ${(props) => props.width};
+const StyledImg = styled.img<{ height: string }>`
+  height: ${(props) => props.height};
 `;
 
 const CardWrapper = styled.div<{ marginTop: string; marginLeft: string }>`

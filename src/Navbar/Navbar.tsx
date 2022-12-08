@@ -50,7 +50,7 @@ export default function Navbar() {
 
 const NavbarWrapper = styled(Row)`
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   background: #f5f5f5bf;
   min-height: 80px;
   width: 100%;

@@ -13,57 +13,57 @@ type CardType = {
   marginLeft: string;
   author: string;
   image: string;
-  width: string;
+  height: string;
 };
 
 export default function ConnexionDecoration() {
   const cards: CardType[] = [
     {
-      marginTop: "100px",
+      marginTop: "16vh",
       marginLeft: "50px",
       author: "D.Demontis",
       image: image12,
-      width: "200px",
+      height: "20vh",
     },
     {
-      marginTop: "140px",
+      marginTop: "22vh",
       marginLeft: "350px",
       author: "M.Weber",
       image: image13,
-      width: "150px",
+      height: "15vh",
     },
     {
-      marginTop: "100px",
+      marginTop: "16vh",
       marginLeft: "530px",
       author: "M.Weber",
       image: image14,
-      width: "150px",
+      height: "15vh",
     },
     {
-      marginTop: "420px",
+      marginTop: "72vh",
       marginLeft: "80px",
       author: "M.Nowak",
       image: image15,
-      width: "150px",
+      height: "15vh",
     },
     {
-      marginTop: "360px",
+      marginTop: "62vh",
       marginLeft: "180px",
       author: "M.Nowak",
       image: image16,
-      width: "200px",
+      height: "20vh",
     },
     {
-      marginTop: "380px",
+      marginTop: "64vh",
       marginLeft: "450px",
       author: "Van Gogh",
       image: image17,
-      width: "200px",
+      height: "20vh",
     },
   ];
 
   return (
-    <ConnexionDecorationRow align="middle" justify="center">
+    <ConnexionDecorationRow justify="center">
       {cards.map((card: CardType) => {
         return (
           <Card
@@ -71,7 +71,7 @@ export default function ConnexionDecoration() {
             marginLeft={card.marginLeft}
             author={card.author}
             image={card.image}
-            width={card.width}
+            height={card.height}
           ></Card>
         );
       })}
@@ -91,6 +91,8 @@ const StyledSlogan = styled.div`
   font-weight: 600;
   font-size: 2rem;
   text-align: center;
+  z-index: 1;
+  margin-top: 45vh;
 `;
 
 const ConnexionDecorationRow = styled(Row)`
