@@ -1,11 +1,26 @@
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
-// TODO :
-// 1e chose à faire : aligner verticalment les inputs
+import { LoadingOutlined } from "@ant-design/icons";
+import { useState } from "react";
+import { isLoggedIn } from "../../SetupRecoil";
+import { useSetRecoilState } from "recoil";
+import { useNavigate } from "react-router-dom";
 
 export default function Connexion() {
+  const [isLoading, setIsLoading] = useState(false);
+  const setLoggedIn = useSetRecoilState(isLoggedIn);
+  const navigate = useNavigate();
+
+  function handleOnClick() {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setLoggedIn(true);
+      navigate("/mvp-leonart.github.io");
+    }, 1500);
+  }
+
   return (
     <ConnexionRow align="middle" justify="center">
       <CenteredDiv>
@@ -20,13 +35,20 @@ export default function Connexion() {
           </Col>
           <Col flex="auto"></Col>
           <Col span={11}>
-            <HalfButton color="#FFFFFF" background="#2D6A4F">
+            <HalfButton
+              color="#FFFFFF"
+              background="#2D6A4F"
+              grey={isLoading}
+              onClick={handleOnClick}
+            >
+              {isLoading && <LoadingOutlined style={{ fontSize: 14, marginRight: "10px" }} spin />}{" "}
               Se connecter
             </HalfButton>
           </Col>
         </FullRow>
         <StyledDiv>
-          Pas encore de compte ? <StyledLink to="/register">S'inscrire</StyledLink>
+          Pas encore de compte ?{" "}
+          <StyledLink to="/register">S'inscrire</StyledLink>
         </StyledDiv>
       </CenteredDiv>
     </ConnexionRow>
@@ -88,7 +110,12 @@ const FullInput = styled.input`
   }
 `;
 
-const HalfButton = styled.div<{ color: string; background: string }>`
+const HalfButton = styled.div<{
+  color: string;
+  background: string;
+  grey?: boolean;
+}>`
+  pointer-events: ${(props) => props.grey && "none"};
   font-family: "Montserrat", sans-serif;
   padding: 10px 20px;
   background: ${(props) => props.background};
@@ -98,7 +125,7 @@ const HalfButton = styled.div<{ color: string; background: string }>`
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
     drop-shadow(-2px -2px 4px #ffffff);
   :hover {
-    cursor: pointer;
+    cursor: ${(props) => (props.grey ? "default" : "pointer")};
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25))
       drop-shadow(-1px -1px 1px #ffffff);
   }

@@ -9,6 +9,7 @@ import image16 from "../../assets/image16.png";
 import image17 from "../../assets/image17.png";
 
 type CardType = {
+  id: string;
   marginTop: string;
   marginLeft: string;
   author: string;
@@ -19,6 +20,7 @@ type CardType = {
 export default function ConnexionDecoration() {
   const cards: CardType[] = [
     {
+      id: "card1",
       marginTop: "16vh",
       marginLeft: "50px",
       author: "D.Demontis",
@@ -26,6 +28,7 @@ export default function ConnexionDecoration() {
       height: "20vh",
     },
     {
+      id: "card2",
       marginTop: "22vh",
       marginLeft: "350px",
       author: "M.Weber",
@@ -33,6 +36,7 @@ export default function ConnexionDecoration() {
       height: "15vh",
     },
     {
+      id: "card3",
       marginTop: "16vh",
       marginLeft: "530px",
       author: "M.Weber",
@@ -40,6 +44,7 @@ export default function ConnexionDecoration() {
       height: "15vh",
     },
     {
+      id: "card4",
       marginTop: "72vh",
       marginLeft: "80px",
       author: "M.Nowak",
@@ -47,6 +52,7 @@ export default function ConnexionDecoration() {
       height: "15vh",
     },
     {
+      id: "card5",
       marginTop: "62vh",
       marginLeft: "180px",
       author: "M.Nowak",
@@ -54,6 +60,7 @@ export default function ConnexionDecoration() {
       height: "20vh",
     },
     {
+      id: "card6",
       marginTop: "64vh",
       marginLeft: "450px",
       author: "Van Gogh",
@@ -67,6 +74,7 @@ export default function ConnexionDecoration() {
       {cards.map((card: CardType) => {
         return (
           <Card
+            key={card.id}
             marginTop={card.marginTop}
             marginLeft={card.marginLeft}
             author={card.author}
