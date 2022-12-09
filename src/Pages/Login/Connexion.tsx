@@ -6,6 +6,7 @@ import { useState } from "react";
 import { isLoggedIn } from "../../SetupRecoil";
 import { useSetRecoilState } from "recoil";
 import { useNavigate } from "react-router-dom";
+import { mainPath } from "../../Utils/variables";
 
 export default function Connexion() {
   const [isLoading, setIsLoading] = useState(false);
@@ -48,7 +49,7 @@ export default function Connexion() {
         </FullRow>
         <StyledDiv>
           Pas encore de compte ?{" "}
-          <StyledLink to="/register">S'inscrire</StyledLink>
+          <StyledLink to={mainPath + "/register"}>S'inscrire</StyledLink>
         </StyledDiv>
       </CenteredDiv>
     </ConnexionRow>

@@ -6,6 +6,7 @@ import { isLoggedIn } from "../SetupRecoil";
 import { useSetRecoilState } from "recoil";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useState } from "react";
+import { mainPath } from "../Utils/variables";
 
 export default function LoggedNavbar() {
   const [isLoading, setIsLoading] = useState(false);
@@ -46,25 +47,39 @@ export default function LoggedNavbar() {
           <Col span={20}>
             <Row justify="space-between">
               <Col>
-                <Link to="/">
-                  <PageTitle current={useLocation().pathname === "/"}>Home</PageTitle>
+                <Link to={mainPath}>
+                  <PageTitle current={useLocation().pathname === mainPath}>
+                    Home
+                  </PageTitle>
                 </Link>
               </Col>
               <Col>
-                <Link to="/profil">
-                  <PageTitle current={useLocation().pathname === "/profil"}>Profil</PageTitle>
+                <Link to={mainPath + "/profil"}>
+                  <PageTitle
+                    current={useLocation().pathname === mainPath + "/profil"}
+                  >
+                    Profil
+                  </PageTitle>
                 </Link>
               </Col>
               <Col>
-                <Link to="/publier">
-                  <PageTitle current={useLocation().pathname === "/publier"}>
+                <Link to={mainPath + "/publier"}>
+                  <PageTitle
+                    current={useLocation().pathname === mainPath + "/publier"}
+                  >
                     Publier
                   </PageTitle>
                 </Link>
               </Col>
               <Col>
-                <Link to="/messagerie">
-                  <PageTitle current={useLocation().pathname === "/messagerie"}>Messagerie</PageTitle>
+                <Link to={mainPath + "/messagerie"}>
+                  <PageTitle
+                    current={
+                      useLocation().pathname === mainPath + "/messagerie"
+                    }
+                  >
+                    Messagerie
+                  </PageTitle>
                 </Link>
               </Col>
             </Row>

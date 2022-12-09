@@ -2,6 +2,7 @@ import { Row, Col } from "antd";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { mainPath } from "../Utils/variables";
 
 export default function NotLoggedNavbar() {
   return (
@@ -9,7 +10,7 @@ export default function NotLoggedNavbar() {
       <StyledCol span={8}>
         <FullRow align="middle">
           <Col>
-            <Link to="/mvp-leonart.github.io">
+            <Link to={mainPath}>
               <StyledImg alt="logo" src={logo}></StyledImg>
             </Link>
           </Col>
@@ -18,7 +19,7 @@ export default function NotLoggedNavbar() {
       </StyledCol>
       <StyledCol span={8}>
         <FullRow align="middle" justify="center">
-          <Link to="/mvp-leonart.github.io">
+          <Link to={mainPath}>
             <StyledLeonart>
               <StyledLeon>Leon</StyledLeon>
               <StyledArt>'Art</StyledArt>
@@ -31,12 +32,12 @@ export default function NotLoggedNavbar() {
           <Col flex="auto"></Col>
           <Col>
             <FullRow align="middle">
-              <Link to="/login">
+              <Link to={mainPath + "/login"}>
                 <StyledButton color="#FFFFFF" background="#2D6A4F">
                   Se connecter
                 </StyledButton>
               </Link>
-              <Link to="/register">
+              <Link to={mainPath + "/register"}>
                 <StyledButton color="#52B788" background="#F5F5F5">
                   S'inscrire
                 </StyledButton>

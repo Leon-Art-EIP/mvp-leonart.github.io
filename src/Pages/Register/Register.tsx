@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { mainPath } from "../../Utils/variables";
 
 export default function Register() {
   return (
@@ -14,21 +15,8 @@ export default function Register() {
           <FullInput placeholder="E-mail"></FullInput>
           <StyledButton color="#468367" background="#F5F5F5">Se connecter avec Google</StyledButton>
           <StyledButton color="#FFFFFF" background="#2D6A4F">S' inscrire</StyledButton>
-          {/* <FullRow>
-            <Col span={11}>
-              <HalfButton color="#468367" background="#F5F5F5">
-                Se connecter avec Google
-              </HalfButton>
-            </Col>
-            <Col flex="auto"></Col>
-            <Col span={11}>
-              <HalfButton color="#FFFFFF" background="#2D6A4F">
-                S' inscrire
-              </HalfButton>
-            </Col>
-          </FullRow> */}
           <StyledDiv>
-            Vous avez déjà un compte ? <StyledLink to="/login">Se connecter</StyledLink>
+            Vous avez déjà un compte ? <StyledLink to={mainPath + "/login"}>Se connecter</StyledLink>
           </StyledDiv>
         </ConnexionRow>
       </StyledCol>
