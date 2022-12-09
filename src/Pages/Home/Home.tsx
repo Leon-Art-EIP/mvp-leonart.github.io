@@ -108,11 +108,11 @@ export default function Home() {
 }
 
 const HomeWrapper = styled.div`
-  background: linear-gradient(#d8f3dc, #2d6a4f);
+  background: white;
 `;
 
 const GridWrapper = styled.div`
   padding-top: 18vh;
-  width: 55%;
+  width: 80%;
   margin: auto;
 `;

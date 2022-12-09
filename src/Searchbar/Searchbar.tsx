@@ -18,7 +18,6 @@ const SearchbarWrapper = styled(Row)`
   z-index: 1;
   min-height: 80px;
   width: 100%;
-  backdrop-filter: blur(15px);
   margin-top : 100px;
   margin-left: auto;
   margin-right: auto;
