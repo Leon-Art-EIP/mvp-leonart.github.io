@@ -18,7 +18,7 @@ export default function LoggedNavbar() {
   return (
     <NavbarWrapper>
       <LinkersWrapper>
-        <Col span={8}>
+        <Col span={9}>
           <FullRow align="middle">
             <Col>
               <Link to="/mvp-leonart.github.io">
@@ -37,7 +37,7 @@ export default function LoggedNavbar() {
             </Col>
           </FullRow>
         </Col>
-        <Col span={8}>
+        <Col span={6}>
           <FullRow align="middle" justify="center">
             <Col span={20}>
               <Row justify="space-between">
@@ -45,15 +45,6 @@ export default function LoggedNavbar() {
                   <Link to={mainPath}>
                     <PageTitle current={useLocation().pathname === mainPath}>
                       Home
-                    </PageTitle>
-                  </Link>
-                </Col>
-                <Col>
-                  <Link to={mainPath + "/profil"}>
-                    <PageTitle
-                      current={useLocation().pathname === mainPath + "/profil"}
-                    >
-                      Profil
                     </PageTitle>
                   </Link>
                 </Col>
@@ -81,7 +72,7 @@ export default function LoggedNavbar() {
             </Col>
           </FullRow>
         </Col>
-        <Col span={8}>
+        <Col span={9}>
           <FullRow align="middle">
             <Col flex="auto"></Col>
             <Col>
