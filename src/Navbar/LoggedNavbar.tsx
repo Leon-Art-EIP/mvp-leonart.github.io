@@ -1,25 +1,18 @@
 import { Col, Row } from "antd";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
-import { isLoggedIn } from "../SetupRecoil";
-import { useSetRecoilState } from "recoil";
-import { LoadingOutlined } from "@ant-design/icons";
-import { useState } from "react";
 import { mainPath } from "../Utils/variables";
 import Searchbar from "../Searchbar/Searchbar";
+import { UserOutlined } from "@ant-design/icons";
+import { useState } from "react";
+import Profile from "./Profile";
 
 export default function LoggedNavbar() {
-  const [isLoading, setIsLoading] = useState(false);
-  const setLoggedIn = useSetRecoilState(isLoggedIn);
-  const navigate = useNavigate();
-  function handleOnClick() {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-      setLoggedIn(false);
-      navigate(mainPath);
-    }, 1500);
+  const [profileOpen, setProfileOpen] = useState(false);
+
+  function handleProfileOnClick() {
+    setProfileOpen(!profileOpen);
   }
 
   return (
@@ -92,28 +85,24 @@ export default function LoggedNavbar() {
           <FullRow align="middle">
             <Col flex="auto"></Col>
             <Col>
-              <StyledButton
-                color="#52B788"
-                background="#F5F5F5"
-                grey={isLoading}
-                onClick={handleOnClick}
-              >
-                {isLoading && (
-                  <LoadingOutlined
-                    style={{ fontSize: 14, marginRight: "10px" }}
-                    spin
-                  />
-                )}{" "}
-                Déconnexion
-              </StyledButton>
+              <StyledUserOutlined onClick={handleProfileOnClick} />
             </Col>
           </FullRow>
         </Col>
+        {profileOpen && <Profile />}
       </LinkersWrapper>
       {useLocation().pathname === mainPath && <Searchbar />}
     </NavbarWrapper>
   );
 }
+
+const StyledUserOutlined = styled(UserOutlined)`
+  font-size: 1.6rem;
+  margin-right: 20px;
+  :hover {
+    cursor: pointer;
+  }
+`;
 
 const NavbarWrapper = styled.div`
   position: sticky;
@@ -164,26 +153,4 @@ const PageTitle = styled.div<{ current: boolean }>`
   font-weight: 600;
   font-size: 1rem;
   text-align: center;
-`;
-
-const StyledButton = styled.div<{
-  color: string;
-  background: string;
-  grey?: boolean;
-}>`
-  pointer-events: ${(props) => props.grey && "none"};
-  font-family: "Montserrat", sans-serif;
-  padding: 10px 20px;
-  margin-right: 20px;
-  background: ${(props) => props.background};
-  color: ${(props) => props.color};
-  border-radius: 20px;
-  transition: all 0.1s ease-in-out;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(-2px -2px 4px #ffffff);
-  :hover {
-    cursor: ${(props) => (props.grey ? "default" : "pointer")};
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25))
-      drop-shadow(-1px -1px 1px #ffffff);
-  }
 `;
