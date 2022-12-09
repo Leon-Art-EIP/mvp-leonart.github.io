@@ -17,6 +17,5 @@ export default function Login() {
 }
 
 const LoginWrapper = styled(Row)`
-  height: 100vh;
-  width: 100vw;
+  height: ${(window.innerHeight - 80) + "px"};
 `;

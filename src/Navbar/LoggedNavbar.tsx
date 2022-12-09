@@ -7,6 +7,7 @@ import { useSetRecoilState } from "recoil";
 import { LoadingOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { mainPath } from "../Utils/variables";
+import Searchbar from "../Searchbar/Searchbar";
 
 export default function LoggedNavbar() {
   const [isLoading, setIsLoading] = useState(false);
@@ -23,99 +24,106 @@ export default function LoggedNavbar() {
 
   return (
     <NavbarWrapper>
-      <Col span={8}>
-        <FullRow align="middle">
-          <Col>
-            <Link to="/mvp-leonart.github.io">
-              <Row>
+      <LinkersWrapper>
+        <Col span={8}>
+          <FullRow align="middle">
+            <Col>
+              <Link to="/mvp-leonart.github.io">
+                <Row>
+                  <Col>
+                    <StyledImg alt="logo" src={logo}></StyledImg>
+                  </Col>
+                  <Col>
+                    <StyledLeonart>
+                      <StyledLeon>Leon</StyledLeon>
+                      <StyledArt>'Art</StyledArt>
+                    </StyledLeonart>
+                  </Col>
+                </Row>
+              </Link>
+            </Col>
+          </FullRow>
+        </Col>
+        <Col span={8}>
+          <FullRow align="middle" justify="center">
+            <Col span={20}>
+              <Row justify="space-between">
                 <Col>
-                  <StyledImg alt="logo" src={logo}></StyledImg>
+                  <Link to={mainPath}>
+                    <PageTitle current={useLocation().pathname === mainPath}>
+                      Home
+                    </PageTitle>
+                  </Link>
                 </Col>
                 <Col>
-                  <StyledLeonart>
-                    <StyledLeon>Leon</StyledLeon>
-                    <StyledArt>'Art</StyledArt>
-                  </StyledLeonart>
+                  <Link to={mainPath + "/profil"}>
+                    <PageTitle
+                      current={useLocation().pathname === mainPath + "/profil"}
+                    >
+                      Profil
+                    </PageTitle>
+                  </Link>
+                </Col>
+                <Col>
+                  <Link to={mainPath + "/publier"}>
+                    <PageTitle
+                      current={useLocation().pathname === mainPath + "/publier"}
+                    >
+                      Publier
+                    </PageTitle>
+                  </Link>
+                </Col>
+                <Col>
+                  <Link to={mainPath + "/messagerie"}>
+                    <PageTitle
+                      current={
+                        useLocation().pathname === mainPath + "/messagerie"
+                      }
+                    >
+                      Messagerie
+                    </PageTitle>
+                  </Link>
                 </Col>
               </Row>
-            </Link>
-          </Col>
-        </FullRow>
-      </Col>
-      <Col span={8}>
-        <FullRow align="middle" justify="center">
-          <Col span={20}>
-            <Row justify="space-between">
-              <Col>
-                <Link to={mainPath}>
-                  <PageTitle current={useLocation().pathname === mainPath}>
-                    Home
-                  </PageTitle>
-                </Link>
-              </Col>
-              <Col>
-                <Link to={mainPath + "/profil"}>
-                  <PageTitle
-                    current={useLocation().pathname === mainPath + "/profil"}
-                  >
-                    Profil
-                  </PageTitle>
-                </Link>
-              </Col>
-              <Col>
-                <Link to={mainPath + "/publier"}>
-                  <PageTitle
-                    current={useLocation().pathname === mainPath + "/publier"}
-                  >
-                    Publier
-                  </PageTitle>
-                </Link>
-              </Col>
-              <Col>
-                <Link to={mainPath + "/messagerie"}>
-                  <PageTitle
-                    current={
-                      useLocation().pathname === mainPath + "/messagerie"
-                    }
-                  >
-                    Messagerie
-                  </PageTitle>
-                </Link>
-              </Col>
-            </Row>
-          </Col>
-        </FullRow>
-      </Col>
-      <Col span={8}>
-        <FullRow align="middle">
-          <Col flex="auto"></Col>
-          <Col>
-            <StyledButton
-              color="#52B788"
-              background="#F5F5F5"
-              grey={isLoading}
-              onClick={handleOnClick}
-            >
-              {isLoading && (
-                <LoadingOutlined
-                  style={{ fontSize: 14, marginRight: "10px" }}
-                  spin
-                />
-              )}{" "}
-              Déconnexion
-            </StyledButton>
-          </Col>
-        </FullRow>
-      </Col>
+            </Col>
+          </FullRow>
+        </Col>
+        <Col span={8}>
+          <FullRow align="middle">
+            <Col flex="auto"></Col>
+            <Col>
+              <StyledButton
+                color="#52B788"
+                background="#F5F5F5"
+                grey={isLoading}
+                onClick={handleOnClick}
+              >
+                {isLoading && (
+                  <LoadingOutlined
+                    style={{ fontSize: 14, marginRight: "10px" }}
+                    spin
+                  />
+                )}{" "}
+                Déconnexion
+              </StyledButton>
+            </Col>
+          </FullRow>
+        </Col>
+      </LinkersWrapper>
+      {useLocation().pathname === mainPath && <Searchbar />}
     </NavbarWrapper>
   );
 }
 
-const NavbarWrapper = styled(Row)`
-  position: absolute;
+const NavbarWrapper = styled.div`
+  position: sticky;
+  top: 0;
   z-index: 2;
+`;
+
+const LinkersWrapper = styled(Row)`
   background: #f5f5f5bf;
-  min-height: 80px;
+  height: 80px;
   width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(15px);

@@ -1,5 +1,4 @@
 import { Col, Row } from "antd";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import image from "../../assets/profil_pic.png";
 
@@ -9,7 +8,6 @@ interface ProfilPictureProps {
   image: string;
   height: string;
 }
-
 
 export default function ProfilPage() {
   const profilPic: ProfilPictureProps = {
@@ -50,15 +48,6 @@ export default function ProfilPage() {
   );
 }
 
-const StyledLink = styled(Link)`
-  color: #2d6a4f;
-  text-decoration: underline;
-  :hover {
-    color: #2d6a4f;
-    text-decoration: underline;
-  }
-`;
-
 const Stat = styled.div`
   text-align: left;
   margin-top: 40px;
@@ -93,62 +82,19 @@ const Name = styled.div`
   font-size: 25px;
   text-align: left;
   margin-bottom: 30px;
-  margin-top: 100px;
-`;
-
-const FullInput = styled.input`
-  background: #f5f5f5;
-  box-shadow: inset -2px -2px 4px #ffffff, inset 2px 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  border: none;
-  width: 100%;
-  max-width: 400px;
-  padding: 8px 16px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  margin-bottom: 30px;
-  color: #8f8f8f;
-  outline: none;
-  transition: all 0.3s ease-in-out;
-  :focus {
-    box-shadow: inset -1px -1px 1px #ffffff,
-      inset 1px 1px 1px rgba(0, 0, 0, 0.25);
-  }
+  margin-top: 20px;
 `;
 
 const ProfilBackground = styled(Row)`
   position: relative;
   height: 100%;
   width: 100%;
-  pargin-top: 100px;
   background: #f5f5f5;
 `;
 
 const StyledCol = styled(Col)`
   min-height: 100%;
   width: 100%;
-`;
-
-const StyledButton = styled.div<{ color: string; background: string }>`
-  font-family: "Montserrat", sans-serif;
-  padding: 10px 20px;
-  margin-right: 20px;
-  background: ${(props) => props.background};
-  color: ${(props) => props.color};
-  border-radius: 20px;
-  transition: all 0.1s ease-in-out;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25))
-    drop-shadow(-2px -2px 4px #ffffff);
-  :hover {
-    cursor: pointer;
-    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.25))
-      drop-shadow(-1px -1px 1px #ffffff);
-  }
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width = 100%;
 `;
 
 const ProfilPicture = styled.img<{ props: ProfilPictureProps }>`
@@ -158,5 +104,5 @@ const ProfilPicture = styled.img<{ props: ProfilPictureProps }>`
 const ProfilPictureRow = styled(Row)`
   height: 200px;
   width: 200px;
-  margin-top: 100px;
+  margin-top: 20px;
 `;
