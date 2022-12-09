@@ -18,7 +18,7 @@ export default function Connexion() {
     setTimeout(() => {
       setIsLoading(false);
       setLoggedIn(true);
-      navigate("/");
+      navigate(mainPath);
     }, 1500);
   }
 
