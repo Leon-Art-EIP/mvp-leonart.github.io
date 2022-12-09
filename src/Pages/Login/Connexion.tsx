@@ -42,7 +42,12 @@ export default function Connexion() {
               grey={isLoading}
               onClick={handleOnClick}
             >
-              {isLoading && <LoadingOutlined style={{ fontSize: 14, marginRight: "10px" }} spin />}{" "}
+              {isLoading && (
+                <LoadingOutlined
+                  style={{ fontSize: 14, marginRight: "10px" }}
+                  spin
+                />
+              )}{" "}
               Se connecter
             </HalfButton>
           </Col>

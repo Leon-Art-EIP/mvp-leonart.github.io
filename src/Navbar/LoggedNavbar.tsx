@@ -18,7 +18,7 @@ export default function LoggedNavbar() {
     setTimeout(() => {
       setIsLoading(false);
       setLoggedIn(false);
-      navigate("/mvp-leonart.github.io");
+      navigate(mainPath);
     }, 1500);
   }
 

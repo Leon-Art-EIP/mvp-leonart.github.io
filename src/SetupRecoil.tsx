@@ -12,5 +12,5 @@ export const isLargeScreenState = atom({
 
 export const isLoggedIn = atom({
   key: "isLoggedIn",
-  default: true, // tmp
+  default: false,
 });
