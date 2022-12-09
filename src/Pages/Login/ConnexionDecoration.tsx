@@ -21,7 +21,7 @@ export default function ConnexionDecoration() {
   const cards: CardType[] = [
     {
       id: "card1",
-      marginTop: "16vh",
+      marginTop: "5vh",
       marginLeft: "50px",
       author: "D.Demontis",
       image: image12,
@@ -29,7 +29,7 @@ export default function ConnexionDecoration() {
     },
     {
       id: "card2",
-      marginTop: "22vh",
+      marginTop: "14vh",
       marginLeft: "350px",
       author: "M.Weber",
       image: image13,
@@ -37,7 +37,7 @@ export default function ConnexionDecoration() {
     },
     {
       id: "card3",
-      marginTop: "16vh",
+      marginTop: "5vh",
       marginLeft: "530px",
       author: "M.Weber",
       image: image14,
@@ -45,7 +45,7 @@ export default function ConnexionDecoration() {
     },
     {
       id: "card4",
-      marginTop: "72vh",
+      marginTop: "60vh",
       marginLeft: "80px",
       author: "M.Nowak",
       image: image15,
@@ -53,7 +53,7 @@ export default function ConnexionDecoration() {
     },
     {
       id: "card5",
-      marginTop: "62vh",
+      marginTop: "52vh",
       marginLeft: "180px",
       author: "M.Nowak",
       image: image16,
@@ -61,7 +61,7 @@ export default function ConnexionDecoration() {
     },
     {
       id: "card6",
-      marginTop: "64vh",
+      marginTop: "58vh",
       marginLeft: "450px",
       author: "Van Gogh",
       image: image17,
@@ -70,7 +70,7 @@ export default function ConnexionDecoration() {
   ];
 
   return (
-    <ConnexionDecorationRow justify="center">
+    <ConnexionDecorationRow justify="center" align="middle">
       {cards.map((card: CardType) => {
         return (
           <Card
@@ -100,7 +100,6 @@ const StyledSlogan = styled.div`
   font-size: 2rem;
   text-align: center;
   z-index: 1;
-  margin-top: 45vh;
 `;
 
 const ConnexionDecorationRow = styled(Row)`

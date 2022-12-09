@@ -56,7 +56,6 @@ const Title = styled.div`
   font-size: 25px;
   text-align: center;
   margin-bottom: 30px;
-  margin-top: 100px;
 `;
 
 const FullInput = styled.input`

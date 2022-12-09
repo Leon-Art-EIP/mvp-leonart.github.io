@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Searchbar from "../../Searchbar/Searchbar";
 import { ReactPictureGrid } from "react-picture-grid";
 
 export default function Home() {
@@ -97,7 +96,6 @@ export default function Home() {
   ];
   return (
     <div>
-      <Searchbar />
       <HomeWrapper>
         <GridWrapper>
           <ReactPictureGrid data={data} showTitle />
@@ -112,7 +110,6 @@ const HomeWrapper = styled.div`
 `;
 
 const GridWrapper = styled.div`
-  padding-top: 18vh;
   width: 80%;
   margin: auto;
 `;

@@ -1,60 +1,68 @@
 import { Row, Col } from "antd";
 import styled from "styled-components";
 import logo from "../assets/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { mainPath } from "../Utils/variables";
+import Searchbar from "../Searchbar/Searchbar";
 
 export default function NotLoggedNavbar() {
   return (
     <NavbarWrapper>
-      <StyledCol span={8}>
-        <FullRow align="middle">
-          <Col>
+      <LinkersWrapper>
+        <StyledCol span={8}>
+          <FullRow align="middle">
+            <Col>
+              <Link to={mainPath}>
+                <StyledImg alt="logo" src={logo}></StyledImg>
+              </Link>
+            </Col>
+            <Col flex="auto"></Col>
+          </FullRow>
+        </StyledCol>
+        <StyledCol span={8}>
+          <FullRow align="middle" justify="center">
             <Link to={mainPath}>
-              <StyledImg alt="logo" src={logo}></StyledImg>
+              <StyledLeonart>
+                <StyledLeon>Leon</StyledLeon>
+                <StyledArt>'Art</StyledArt>
+              </StyledLeonart>
             </Link>
-          </Col>
-          <Col flex="auto"></Col>
-        </FullRow>
-      </StyledCol>
-      <StyledCol span={8}>
-        <FullRow align="middle" justify="center">
-          <Link to={mainPath}>
-            <StyledLeonart>
-              <StyledLeon>Leon</StyledLeon>
-              <StyledArt>'Art</StyledArt>
-            </StyledLeonart>
-          </Link>
-        </FullRow>
-      </StyledCol>
-      <StyledCol span={8}>
-        <FullRow>
-          <Col flex="auto"></Col>
-          <Col>
-            <FullRow align="middle">
-              <Link to={mainPath + "/login"}>
-                <StyledButton color="#FFFFFF" background="#2D6A4F">
-                  Se connecter
-                </StyledButton>
-              </Link>
-              <Link to={mainPath + "/register"}>
-                <StyledButton color="#52B788" background="#F5F5F5">
-                  S'inscrire
-                </StyledButton>
-              </Link>
-            </FullRow>
-          </Col>
-        </FullRow>
-      </StyledCol>
+          </FullRow>
+        </StyledCol>
+        <StyledCol span={8}>
+          <FullRow>
+            <Col flex="auto"></Col>
+            <Col>
+              <FullRow align="middle">
+                <Link to={mainPath + "/login"}>
+                  <StyledButton color="#FFFFFF" background="#2D6A4F">
+                    Se connecter
+                  </StyledButton>
+                </Link>
+                <Link to={mainPath + "/register"}>
+                  <StyledButton color="#52B788" background="#F5F5F5">
+                    S'inscrire
+                  </StyledButton>
+                </Link>
+              </FullRow>
+            </Col>
+          </FullRow>
+        </StyledCol>
+      </LinkersWrapper>
+      {useLocation().pathname === mainPath && <Searchbar />}
     </NavbarWrapper>
   );
 }
 
-const NavbarWrapper = styled(Row)`
-  position: absolute;
+const NavbarWrapper = styled.div`
+  position: sticky;
+  top: 0;
   z-index: 2;
+`;
+
+const LinkersWrapper = styled(Row)`
   background: #f5f5f5bf;
-  min-height: 80px;
+  height: 80px;
   width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(15px);
