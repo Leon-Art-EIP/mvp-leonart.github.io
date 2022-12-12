@@ -1,14 +1,24 @@
-import { Row, Col } from "antd";
+import { Row, Col, Checkbox } from "antd";
 import styled from "styled-components";
 
 export default function Searchbar() {
   return (
     <SearchbarWrapper align="middle" justify="center">
+      <Col span={2}>
+        <Row justify="end">
+          <StyledCheckbox>Offres</StyledCheckbox>
+        </Row>
+      </Col>
       <StyledCol span={6}>
         <Row align="middle" justify="center">
           <StyledInput placeholder="Rechercher..."></StyledInput>
         </Row>
       </StyledCol>
+      <Col span={2}>
+        <Row justify="start">
+          <StyledCheckbox>Projets</StyledCheckbox>
+        </Row>
+      </Col>
     </SearchbarWrapper>
   );
 }
@@ -22,8 +32,20 @@ const SearchbarWrapper = styled(Row)`
   border-width: 1px; */
 `;
 
+const StyledCheckbox = styled(Checkbox)`
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2px 5px;
+  background: #7575755d;
+  color: white;
+  border-radius: 2px;
+`;
+
 const StyledCol = styled(Col)`
   width: 100%;
+  /* border: solid;
+  border-color: red;
+  border-width: 1px; */
 `;
 
 const StyledInput = styled.input`
