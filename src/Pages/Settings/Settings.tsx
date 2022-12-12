@@ -1,6 +1,6 @@
 import { Col, Row } from "antd";
 import styled from "styled-components";
-import image from "../../assets/profil_pic.png";
+import image from "../../assets/matteo.png";
 
 interface ProfilPictureProps {
   marginTop: string;
