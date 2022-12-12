@@ -4,9 +4,9 @@ import styled from "styled-components";
 import logo from "../assets/logo.svg";
 import { mainPath } from "../Utils/variables";
 import Searchbar from "../Searchbar/Searchbar";
-import { UserOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import Profile from "./Profile";
+import profile from "../assets/profil.png";
 
 export default function LoggedNavbar() {
   const [profileOpen, setProfileOpen] = useState(false);
@@ -76,7 +76,7 @@ export default function LoggedNavbar() {
           <FullRow align="middle">
             <Col flex="auto"></Col>
             <Col>
-              <StyledUserOutlined onClick={handleProfileOnClick} />
+              <StyledProfile alt="profil" src={profile} onClick={handleProfileOnClick} />
             </Col>
           </FullRow>
         </Col>
@@ -87,9 +87,10 @@ export default function LoggedNavbar() {
   );
 }
 
-const StyledUserOutlined = styled(UserOutlined)`
-  font-size: 1.6rem;
+const StyledProfile = styled.img`
   margin-right: 20px;
+  width: 40px;
+  border-radius: 20px;
   :hover {
     cursor: pointer;
   }
