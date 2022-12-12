@@ -14,94 +14,64 @@ export default function ProfilPage() {
   const data = [
     {
       image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        "https://images.unsplash.com/photo-1670349928042-519fee6e11de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
       title: "Nature 01",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
+        "https://images.unsplash.com/photo-1558444510-2bacddde13bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
       title: "Nature 02",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=894&q=80",
+        "https://images.unsplash.com/photo-1560611942-a56ce2956f1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
       title: "Nature 03",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
       title: "Nature 04",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        "https://images.unsplash.com/photo-1557505956-eb3d48eb0223?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
       title: "Nature 04",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
+        "https://images.unsplash.com/photo-1560612137-e423867d48d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+      title: "Nature 602",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
+        "https://images.unsplash.com/photo-1597319190485-a2805361746c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+      title: "Nature 38",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
+        "https://images.unsplash.com/photo-1604440401661-8f6f07c285a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=663&q=80",
+      title: "Nature 22",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
+        "https://images.unsplash.com/photo-1563177974-c89b7382147b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
+      title: "Nature 66",
       description: "This picture is taken from unsplash.com",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
+        "https://images.unsplash.com/photo-1586773611131-daae9fb00884?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      title: "Nature 67",
       description: "This picture is taken from unsplash.com",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "This picture is taken from unsplash.com",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "This picture is taken from unsplash.com",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "This picture is taken from unsplash.com",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "This picture is taken from unsplash.com",
-    },
-    {
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "This picture is taken from unsplash.com",
-    },
+    }
   ];
   const profilPic: ProfilPictureProps = {
     marginTop: "16vh",
@@ -183,7 +153,7 @@ const Name = styled.div`
 
 const ProfilBackground = styled(Row)`
   position: relative;
-  height: 15%;
+  height: 20%;
   width: 100%;
   background: #f5f5f5;
 `;
@@ -201,11 +171,11 @@ const ProfilPictureRow = styled(Row)`
   height: 200px;
   width: 200px;
   margin-top: 100px;
-  margin-top: 20px;
+  margin-top: 20px; 
 `;
 
 const GridWrapper = styled.div`
-  padding-top: 1vh;
+  padding-top: 2vh;
   width: 100%;
   margin: auto;
 `;

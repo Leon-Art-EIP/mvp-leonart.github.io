@@ -6,7 +6,7 @@ import Register from "./Register/Register";
 import Login from "./Login/Login";
 import Profil from "./Profil/Profil";
 import Home from "./Home/Home";
-import Parameters from "./Parameters/Parameters";
+import Settings from "./Settings/Settings";
 
 export default function Pages() {
   return (
@@ -16,7 +16,7 @@ export default function Pages() {
       <Route path={mainPath + "/publier"} element={<Publier />} />
       <Route path={mainPath + "/messagerie"} element={<Messagerie />} />
       <Route path={mainPath + "/profil"} element={<Profil />} />
-      <Route path={mainPath + "/parametres"} element={<Parameters />} />
+      <Route path={mainPath + "/parametres"} element={<Settings />} />
       <Route path={mainPath} element={<Home />} />
     </Routes>
   );
