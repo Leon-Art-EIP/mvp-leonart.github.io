@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mvp-leonart.github.io/static/css/main.e6c13ad2.css",
-    "main.js": "/mvp-leonart.github.io/static/js/main.5d806953.js",
+    "main.js": "/mvp-leonart.github.io/static/js/main.4aa817e2.js",
     "static/js/787.30325765.chunk.js": "/mvp-leonart.github.io/static/js/787.30325765.chunk.js",
     "static/media/image17.png": "/mvp-leonart.github.io/static/media/image17.5e75c4ebd2930ca26437.png",
     "static/media/image16.png": "/mvp-leonart.github.io/static/media/image16.aded8fe60e623f1a38d6.png",
@@ -14,11 +14,11 @@
     "index.html": "/mvp-leonart.github.io/index.html",
     "static/media/logo.svg": "/mvp-leonart.github.io/static/media/logo.98f245b83849a66423b1e7fdfc343b7f.svg",
     "main.e6c13ad2.css.map": "/mvp-leonart.github.io/static/css/main.e6c13ad2.css.map",
-    "main.5d806953.js.map": "/mvp-leonart.github.io/static/js/main.5d806953.js.map",
+    "main.4aa817e2.js.map": "/mvp-leonart.github.io/static/js/main.4aa817e2.js.map",
     "787.30325765.chunk.js.map": "/mvp-leonart.github.io/static/js/787.30325765.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5d806953.js"
+    "static/js/main.4aa817e2.js"
   ]
 }
