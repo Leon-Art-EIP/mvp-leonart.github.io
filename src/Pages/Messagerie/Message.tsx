@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Row, Col, Modal } from "antd";
 import { useState } from "react";
+import { Msg } from "./Messagerie";
 
 interface PropsMessage {
-  width: string;
+  message: Omit<Msg, 'id'>;
 }
 
-export default function Message(props: PropsMessage) {
+export default function Message({message}: PropsMessage) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -22,9 +23,13 @@ export default function Message(props: PropsMessage) {
   };
 
   return (
-    <StyledCol width={props.width} flex="auto">
+    <StyledCol width={message.width} flex="auto">
       <StyledRow align="middle" justify="center" onClick={showModal}>
-        <>message</>
+        <StyledImg alt="profil" src={message.image}></StyledImg>
+        <StyledText>{message.name}</StyledText>
+        <StyledText>-</StyledText>
+        <StyledText>{message.date}</StyledText>
+        <StyledText>{message.hour}</StyledText>
       </StyledRow>
       <Modal
         title="Message Modal"
@@ -53,4 +58,16 @@ const StyledCol = styled(Col)<{ width: string }>`
     background: #9df5aa;
     cursor: pointer;
   }
+`;
+
+const StyledImg = styled.img`
+  width: 30px;
+  border-radius: 10px;
+`;
+
+const StyledText = styled.div`
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #6f6f6f;
+  font-family: 'Montserrat', sans-serif;
 `;
