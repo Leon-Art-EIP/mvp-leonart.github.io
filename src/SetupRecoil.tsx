@@ -14,3 +14,8 @@ export const isLoggedIn = atom({
   key: "isLoggedIn",
   default: false,
 });
+
+export const searchInput = atom({
+  key: "searchInput",
+  default: "",
+});

@@ -17,7 +17,7 @@ export default function Pages() {
       <Route path={mainPath + "/messagerie"} element={<Messagerie />} />
       <Route path={mainPath + "/profil"} element={<Profil />} />
       <Route path={mainPath + "/parametres"} element={<Settings />} />
-      <Route path={mainPath} element={<Home />} />
+      <Route path={mainPath} element={<Home/>} />
     </Routes>
   );
 }

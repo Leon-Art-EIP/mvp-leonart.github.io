@@ -1,22 +1,36 @@
-import { Row, Col, Checkbox } from "antd";
+import { Row, Col, Switch } from "antd";
+import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
+import { searchInput } from "../SetupRecoil";
 
 export default function Searchbar() {
+  const setInput = useSetRecoilState(searchInput);
+
+  function handleInputOnChange(e: React.ChangeEvent<HTMLInputElement>) {
+    setInput(e.target.value);
+  }
+
   return (
     <SearchbarWrapper align="middle" justify="center">
-      <Col span={2}>
+      <Col flex="auto">
         <Row justify="end">
-          <StyledCheckbox>Offres</StyledCheckbox>
+          <StyledSwitch>
+            <StyledSwitchTitle>Offres</StyledSwitchTitle>
+            <Switch />
+          </StyledSwitch>
         </Row>
       </Col>
       <StyledCol span={6}>
         <Row align="middle" justify="center">
-          <StyledInput placeholder="Rechercher..."></StyledInput>
+          <StyledInput placeholder="Rechercher..." onChange={handleInputOnChange}></StyledInput>
         </Row>
       </StyledCol>
-      <Col span={2}>
+      <Col flex="auto">
         <Row justify="start">
-          <StyledCheckbox>Projets</StyledCheckbox>
+          <StyledSwitch>
+            <StyledSwitchTitle>Projets</StyledSwitchTitle>
+            <Switch />
+          </StyledSwitch>
         </Row>
       </Col>
     </SearchbarWrapper>
@@ -32,13 +46,12 @@ const SearchbarWrapper = styled(Row)`
   border-width: 1px; */
 `;
 
-const StyledCheckbox = styled(Checkbox)`
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 2px 5px;
-  background: #7575755d;
-  color: white;
-  border-radius: 2px;
+const StyledSwitch = styled(Row)`
+  margin: 0px 10px;
+`;
+
+const StyledSwitchTitle = styled.div`
+  margin: 0px 10px;
 `;
 
 const StyledCol = styled(Col)`
