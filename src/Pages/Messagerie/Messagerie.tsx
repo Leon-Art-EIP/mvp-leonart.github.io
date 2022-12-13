@@ -1,38 +1,44 @@
+import { Col, Row } from "antd";
 import styled from "styled-components";
-import { Row } from "antd";
-import Message from "./Message";
-import profile from "../../assets/profil.png";
-
-export type Msg = {
-  id: string;
-  width: string;
-  image: string;
-  name: string;
-  date: string;
-  hour: string;
-}
 
 export default function Messagerie() {
-  const messages: Msg[] = [
-    { id: "message1", width: "400px", image: profile, name: "Jon Snow", date: "9 sept.", hour: "16h50" },
-    { id: "message2", width: "200px", image: profile, name: "Damien D", date: "11 sept.", hour: "16h51" },
-    { id: "message3", width: "100px", image: profile, name: "Evan K", date: "13 sept.", hour: "16h52" },
-    { id: "message4", width: "200px", image: profile, name: "Clovis S", date: "9 nov.", hour: "16h53" },
-    { id: "message5", width: "500px", image: profile, name: "Vivant G", date: "29 sept.", hour: "16h54" },
-    { id: "message6", width: "100px", image: profile, name: "Marine W", date: "3 déc.", hour: "16h55" },
-  ];
-
   return (
-    <StyledRow align="middle">
-      {messages.map((message) => {
-        let {id, ...rest} = message;
-        return <Message key={message.id} message={rest}></Message>;
-      })}
-    </StyledRow>
+    <MessagerieWrapper>
+      <StyledColButtons>
+        <StyledButton></StyledButton>
+        <StyledButton></StyledButton>
+        <StyledButton></StyledButton>
+        <StyledButton></StyledButton>
+        <StyledButton></StyledButton>
+        <StyledButton></StyledButton>
+      </StyledColButtons>
+      <Col></Col>
+    </MessagerieWrapper>
   );
 }
 
-const StyledRow = styled(Row)`
-  width: 100%;
-  height: 100%;
+const MessagerieWrapper = styled(Row)`
+  background: #f0efef;
+  margin: 10px 5px;
+  border-radius: 10px;
+`;
+
+const StyledColButtons = styled(Col)`
+  margin: 5px;
+  padding: 5px;
+  height: ${window.innerHeight - 80 - 30 + "px"};
+  /* border:solid; */
+  border-width: 1px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+`;
+
+const StyledButton = styled.div`
+  background: #f0efef;
+  box-shadow: inset -4px -4px 10px #ffffff,
+    inset 4px 4px 5px rgba(0, 0, 0, 0.25);
+  width: 250px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 10px 0px;
 `;
