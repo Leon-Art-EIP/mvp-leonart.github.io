@@ -8,39 +8,101 @@ import profile4 from "../../assets/Rectangle 180(3).png";
 import profile5 from "../../assets/Rectangle 184.png";
 import profile6 from "../../assets/Rectangle 185.png";
 import { useState } from "react";
+import ContactHeader from "./ContactHeader";
+import Message from "./Message";
 
 export default function Messagerie() {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("Cédric Ulrich");
   const contacts: ContactType[] = [
     {
       image: profile1,
       name: "Cédric Ulrich",
       lastmsg: "salut sa va est-ce que...",
+      received: [
+        "ce sont les mêmes messages pour tt le monde",
+        "car c'est long à faire pour rien",
+        "blablablabla\nretour à la ligne ?",
+      ],
+      sent: [
+        "moi aussi ce sont tjs les mm messages",
+        "car oui bus autorioute voiture f1\npetit retour à la ligne\nn2",
+        "et enfin le dernier message",
+      ],
     },
     {
       image: profile2,
       name: "Evan Koehler",
       lastmsg: "le néomorphisme est né...",
+      received: [
+        "bonj<eosjfsmowdjfwmdjfdlglwkd,fwdlmf",
+        "<ejrozeroejfoqsjdfd,klvwmxcnvoierjdfg>",
+        "wfjdmgfdpwikbpgqerjtqsdnvmwkdfngwmldfgml",
+      ],
+      sent: [
+        "okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "blitzblitzblitzblitzblitzblitzblitzblitzblitzblitz",
+        "syyyymmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm",
+      ],
     },
     {
       image: profile3,
       name: "Marius Nowak",
       lastmsg: "tutututtuututututututt...",
+      received: [
+        "blablablablablablablablablablablablablablabla",
+        "albalbalbalbalbalbalbalbalbalbalbalbalbalbalb",
+        "iasamiasamiasamiasamiasamiasamiasamiasamiasamiasamiasam",
+      ],
+      sent: [
+        "MmmhhhMmmhhhMmmhhhMmmhhhMmmhhhM",
+        "Lopsem durojz pzhe ghrzvu ozeuozidoifozkzen izr izueo",
+        "et enfin le dernier message",
+      ],
     },
     {
       image: profile4,
       name: "Vivant Garrigues",
       lastmsg: "Salut je m'appelle Viv...",
+      received: [
+        "okokokokokokokokokokokokokokokokokokokok",
+        "çavvva ?çavvva ?çavvva ?çavvva ?çavvva ?çavvva ?",
+        "astalisata astalisata astalisata astalisata ?",
+      ],
+      sent: [
+        "ejvoisejvoisejvoisejvoisejvoisejvoisejvoisejvois",
+        "sinncv??sinncv??sinncv??sinncv??sinncv??sinncv??sinncv??",
+        "dakodakdakodakdakodakdakodakdakodakdakoda",
+      ],
     },
     {
       image: profile5,
       name: "Damien Demontis",
       lastmsg: "Salut je suis l'ami de...",
+      received: [
+        "NOrmalllumùmNOrmalllumùmNOrmalllumùmNOrmalllumùm",
+        "velkozzzvelkozzzvelkozzzvelkozzzvelkozzzvelkozzzvelkozzz",
+        "ou ziggs ou cassio ou ziggs ou cassio ou ziggs ou cassio",
+      ],
+      sent: [
+        "non c'ets nul non c'ets nulnon c'ets nulnon c'ets nul",
+        "j'achete leouvre pour 120 eurosj'achete leouvre pour 120 euros",
+        "non en fait ja le veux pasnon en fait ja le",
+      ],
     },
     {
       image: profile6,
       name: "Clovis Schneider",
       lastmsg: "Warcraft 3 est un jeu ...",
+      received: [
+        "mesaoahiozamesaoahiozamesaoahiozamesaoahioza",
+        "la france va gagner 2-1 puis 4-1",
+        "il faut parier sur winamax",
+      ],
+      sent: [
+        "ok jacheteok jacheteok jacheteok jacheteok jachete",
+        "hphphphphphphphphphphphphphphphphphphphphphphphphphphp",
+        "The office saison 23§!!!!!!",
+      ],
     },
   ];
 
@@ -57,10 +119,28 @@ export default function Messagerie() {
           );
         })}
       </StyledCol>
-      <StyledCol flex="auto"></StyledCol>
+      <MessageCol flex="auto">
+        <ContactHeader />
+        <Date>Vendredi 9 décembre 2022</Date>
+        <Message contacts={contacts} selected={selected} />
+      </MessageCol>
     </MessagerieWrapper>
   );
 }
+
+const Date = styled.div`
+  text-align: center;
+  color: #6a6a6a;
+  margin: 15px 0;
+`;
+
+const MessageCol = styled(Col)`
+  box-shadow: inset -4px -4px 10px #ffffff,
+    inset 4px 4px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+`;
 
 const MessagerieWrapper = styled(Row)`
   background: #f0efef;
@@ -75,5 +155,6 @@ const StyledCol = styled(Col)`
   /* border:solid; */
   border-width: 1px;
   border-radius: 20px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: inset -4px -4px 10px #ffffff,
+    inset 4px 4px 5px rgba(0, 0, 0, 0.25);
 `;

@@ -5,6 +5,8 @@ export type ContactType = {
   image: string;
   name: string;
   lastmsg: string;
+  received: string[];
+  sent: string[];
 };
 
 interface ContactProps {
@@ -58,7 +60,7 @@ function ContactInfos({ contact, selected, setSelected }: ContactProps) {
   );
 }
 
-const StyledButtonPressed = styled.div<{ selected?: boolean }>`
+const StyledButtonPressed = styled.div`
   background: #f0efef;
   box-shadow: inset -4px -4px 10px #ffffff,
     inset 4px 4px 5px rgba(0, 0, 0, 0.25);
@@ -68,10 +70,11 @@ const StyledButtonPressed = styled.div<{ selected?: boolean }>`
   margin: 10px 0px;
 `;
 
-const StyledButton = styled.div<{ selected?: boolean }>`
+const StyledButton = styled.div`
   background: #f0efef;
-  box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.25),
-    inset 4px 4px 5px #ffffff;
+  border: solid;
+  border-width: 1px;
+  border-color: #c8c8c8;
   width: 250px;
   height: 60px;
   border-radius: 30px;
