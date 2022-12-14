@@ -8,6 +8,7 @@ export default function Home() {
   const filter = useRecoilValue(searchInput);
   const data = [
     {
+      id: 1,
       image:
         "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       title: "Nature 01",
@@ -15,6 +16,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 2,
       image:
         "https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
       title: "Nature 02",
@@ -22,6 +24,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 3,
       image:
         "https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=894&q=80",
       title: "Nature 03",
@@ -29,6 +32,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 4,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -36,6 +40,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 5,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -43,6 +48,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 6,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -50,6 +56,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 7,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -57,6 +64,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 8,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -64,6 +72,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 9,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -71,6 +80,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 10,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -78,6 +88,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 11,
       image:
         "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
       title: "Nature 04",
@@ -85,6 +96,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 12,
       image:
         "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       title: "Nature 01",
@@ -92,6 +104,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 13,
       image:
         "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       title: "Nature 01",
@@ -99,6 +112,7 @@ export default function Home() {
       prix: "1 000 000 de dollars canadiens",
     },
     {
+      id: 14,
       image:
         "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       title: "Nature 01",
@@ -106,6 +120,7 @@ export default function Home() {
       prix: "10 euros",
     },
     {
+      id: 15,
       image:
         "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
       title: "Nature 01",
@@ -143,7 +158,7 @@ export default function Home() {
           <Row justify="space-around">
             {filtered.map((element) => {
               return (
-                <Tooltip title={element.prix + " - " + element.description}>
+                <Tooltip key={element.id} title={element.prix + " - " + element.description}>
                   <PublicationCol span={7} onClick={() => showModal(element.image, element.title, element.prix, element.description)}>
                     <PublicationTitle>{element.title}</PublicationTitle>
                     <StyledImg
