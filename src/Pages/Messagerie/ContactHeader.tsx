@@ -1,15 +1,26 @@
 import { Col, Row } from "antd";
 import styled from "styled-components";
-import profile1 from "../../assets/Rectangle 180.png";
+import { ContactType } from "./Contact";
 
-export default function ContactHeader() {
+interface ConctactHeaderProps {
+  contacts: ContactType[];
+  selected: string;
+}
+
+export default function ContactHeader({ contacts, selected }: ConctactHeaderProps) {
+  let current: ContactType = {image: "", name: "", lastmsg: "", sent: [], received: []};
+  for (const contact of contacts) {
+    if (contact.name === selected) {
+      current = contact;
+    }
+  }
   return (
     <ContactHeaderWrapper align="middle">
       <Col>
-        <StyledImg alt="profile picture" src={profile1}></StyledImg>
+        <StyledImg alt="profile picture" src={current.image}></StyledImg>
       </Col>
       <Col>
-        <StyledUser>Cédric Ulrich</StyledUser>
+        <StyledUser>{current.name}</StyledUser>
       </Col>
     </ContactHeaderWrapper>
   );

@@ -120,7 +120,7 @@ export default function Messagerie() {
         })}
       </StyledCol>
       <MessageCol flex="auto">
-        <ContactHeader />
+        <ContactHeader contacts={contacts} selected={selected} />
         <Date>Vendredi 9 décembre 2022</Date>
         <Message contacts={contacts} selected={selected} />
         <FullRow align="bottom">
