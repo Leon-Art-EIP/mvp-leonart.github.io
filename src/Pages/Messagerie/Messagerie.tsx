@@ -1,4 +1,4 @@
-import { Col, Row } from "antd";
+import { Col, Input, Row } from "antd";
 import styled from "styled-components";
 import Contact, { ContactType } from "./Contact";
 import profile1 from "../../assets/Rectangle 180.png";
@@ -123,6 +123,9 @@ export default function Messagerie() {
         <ContactHeader />
         <Date>Vendredi 9 décembre 2022</Date>
         <Message contacts={contacts} selected={selected} />
+        <FullRow align="bottom">
+          <StyledInput placeholder="Entrer un message..."></StyledInput>
+        </FullRow>
       </MessageCol>
     </MessagerieWrapper>
   );
@@ -134,12 +137,23 @@ const Date = styled.div`
   margin: 15px 0;
 `;
 
+const FullRow = styled(Row)`
+  height: 90px;
+`;
+
 const MessageCol = styled(Col)`
   box-shadow: inset -4px -4px 10px #ffffff,
     inset 4px 4px 5px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin: 5px;
   padding: 5px;
+`;
+
+const StyledInput = styled(Input)`
+  background: #f0efef;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  padding: 5px 15px;
 `;
 
 const MessagerieWrapper = styled(Row)`
