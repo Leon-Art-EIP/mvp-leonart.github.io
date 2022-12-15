@@ -12,27 +12,19 @@ export default function Searchbar() {
 
   return (
     <SearchbarWrapper align="middle" justify="center">
-      <Col flex="auto">
-        <Row justify="end">
-          <StyledSwitch>
-            <StyledSwitchTitle>Offres</StyledSwitchTitle>
-            <Switch />
-          </StyledSwitch>
-        </Row>
-      </Col>
       <StyledCol span={6}>
         <Row align="middle" justify="center">
-          <StyledInput placeholder="Rechercher..." onChange={handleInputOnChange}></StyledInput>
-        </Row>
-      </StyledCol>
-      <Col flex="auto">
-        <Row justify="start">
+          <StyledInput
+            placeholder="Rechercher..."
+            onChange={handleInputOnChange}
+          ></StyledInput>
           <StyledSwitch>
             <StyledSwitchTitle>Projets</StyledSwitchTitle>
             <Switch />
+            <StyledSwitchTitle>Offres</StyledSwitchTitle>
           </StyledSwitch>
         </Row>
-      </Col>
+      </StyledCol>
     </SearchbarWrapper>
   );
 }
@@ -47,7 +39,9 @@ const SearchbarWrapper = styled(Row)`
 `;
 
 const StyledSwitch = styled(Row)`
-  margin: 0px 10px;
+  margin-top: 10px;
+  background: #f5f5f5;
+  border-radius: 20px;
 `;
 
 const StyledSwitchTitle = styled.div`
