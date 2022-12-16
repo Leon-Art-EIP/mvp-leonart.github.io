@@ -16,47 +16,47 @@ export default function Message({ contacts, selected }: MessageProps) {
             <Col span={12}>
               <Row justify="start">
                 <StyledMessage background="#f0efef" color="black">
+                  {contact.received[0]}
+                </StyledMessage>
+              </Row>
+            </Col>
+            <Col span={12}></Col>
+          </Row>
+          <Row>
+            <Col span={12}></Col>
+            <Col span={12}>
+              <Row justify="end">
+                <StyledMessage background="#2D6A4F" color="white" end>
                   {contact.sent[0]}
                 </StyledMessage>
               </Row>
             </Col>
-            <Col span={12}></Col>
-          </Row>
-          <Row>
-            <Col span={12}></Col>
-            <Col span={12}>
-              <Row justify="end">
-                <StyledMessage background="#2D6A4F" color="white" end>
-                  {contact.received[0]}<br></br>{contact.received[0]}
-                </StyledMessage>
-              </Row>
-            </Col>
           </Row>
           <Row>
             <Col span={12}>
               <Row justify="start">
                 <StyledMessage background="#f0efef" color="black">
-                {contact.sent[1]}
-                </StyledMessage>
-              </Row>
-            </Col>
-            <Col span={12}></Col>
-          </Row>
-          <Row>
-            <Col span={12}></Col>
-            <Col span={12}>
-              <Row justify="end">
-                <StyledMessage background="#2D6A4F" color="white" end>
                 {contact.received[1]}
                 </StyledMessage>
               </Row>
             </Col>
+            <Col span={12}></Col>
+          </Row>
+          <Row>
+            <Col span={12}></Col>
+            <Col span={12}>
+              <Row justify="end">
+                <StyledMessage background="#2D6A4F" color="white" end>
+                {contact.sent[1]}
+                </StyledMessage>
+              </Row>
+            </Col>
           </Row>
           <Row>
             <Col span={12}>
               <Row justify="start">
                 <StyledMessage background="#f0efef" color="black">
-                {contact.sent[2]}<br></br>{contact.sent[2]}
+                {contact.received[2]}
                 </StyledMessage>
               </Row>
             </Col>
@@ -67,7 +67,7 @@ export default function Message({ contacts, selected }: MessageProps) {
             <Col span={12}>
               <Row justify="end">
                 <StyledMessage background="#2D6A4F" color="white" end>
-                {contact.received[2]}
+                {contact.sent[2]}
                 </StyledMessage>
               </Row>
             </Col>
