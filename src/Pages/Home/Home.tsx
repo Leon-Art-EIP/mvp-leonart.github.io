@@ -30,7 +30,7 @@ export default function Home() {
       image: data.primaryImage,
       title: data?.creditLine ?? "titre inconnu",
       description: data?.artistDisplayName ?? "Artiste inconnu",
-      prix: (Math.random() * 1000).toString(),
+      prix: Math.round((Math.random() * 1000)).toString() + " €",
       type: Math.random() * 10 > 5 ? "art" : "offer",
     };
     console.log(newobject);
