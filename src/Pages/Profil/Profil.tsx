@@ -15,70 +15,70 @@ export default function ProfilPage() {
     {
       image:
         "https://images.unsplash.com/photo-1670349928042-519fee6e11de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60",
-      title: "Nature 01",
-      description: "This picture is taken from unsplash.com",
+      title: "Lastel",
+      description: "Photo prise le 23/11/2022",
     },
     {
       image:
         "https://images.unsplash.com/photo-1558444510-2bacddde13bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
-      title: "Nature 02",
-      description: "This picture is taken from unsplash.com",
+      title: "Allee",
+      description: "Photo prise le 01/09/2022",
     },
     {
       image:
         "https://images.unsplash.com/photo-1560611942-a56ce2956f1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
-      title: "Nature 03",
-      description: "This picture is taken from unsplash.com",
+      title: "Etoile",
+      description: "Photo prise le 17/08/2022",
     },
     {
       image:
         "https://images.unsplash.com/photo-1499002238440-d264edd596ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
-      title: "Nature 04",
-      description: "This picture is taken from unsplash.com",
+      title: "Champ",
+      description: "Photo prise le 22/06/2022",
     },
     {
       image:
         "https://images.unsplash.com/photo-1557505956-eb3d48eb0223?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
-      title: "Nature 04",
-      description: "This picture is taken from unsplash.com",
+      title: "Bord de mer",
+      description: "Photo prise le 01/03/2022",
     },
     {
       image:
         "https://images.unsplash.com/photo-1560612137-e423867d48d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
-      title: "Nature 602",
-      description: "This picture is taken from unsplash.com",
+      title: "Monaco",
+      description: "Photo prise le 17/07/2021",
     },
     {
       image:
         "https://images.unsplash.com/photo-1597319190485-a2805361746c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
-      title: "Nature 38",
-      description: "This picture is taken from unsplash.com",
+      title: "Paradis",
+      description: "Photo prise le 12/06/2021",
     },
     {
       image:
         "https://images.unsplash.com/photo-1604440401661-8f6f07c285a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=663&q=80",
-      title: "Nature 22",
-      description: "This picture is taken from unsplash.com",
+      title: "Street",
+      description: "Photo prise le 30/05/2021",
     },
     {
       image:
         "https://images.unsplash.com/photo-1563177974-c89b7382147b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjN8fHNvdXRoJTIwZnJhbmNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60",
-      title: "Nature 66",
-      description: "This picture is taken from unsplash.com",
+      title: "Tournesol",
+      description: "Photo prise le 22/03/2021",
     },
     {
       image:
         "https://images.unsplash.com/photo-1586773611131-daae9fb00884?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      title: "Nature 67",
-      description: "This picture is taken from unsplash.com",
-    }
+      title: "Forêt",
+      description: "Photo prise le 22/01/2021",
+    },
   ];
   const profilPic: ProfilPictureProps = {
     marginTop: "16vh",
     marginLeft: "50px",
     image: image,
     height: "20vh",
-  }
+  };
   return (
     <FullRow>
       <StyledCol span={2}></StyledCol>
@@ -86,10 +86,15 @@ export default function ProfilPage() {
         <ProfilBackground>
           <StyledCol span={1}></StyledCol>
           <ProfilPictureRow>
-            <ProfilPicture alt="logo" src={profilPic.image} props={profilPic}></ProfilPicture>
+            <ProfilPicture
+              alt="logo"
+              src={profilPic.image}
+              props={profilPic}
+            ></ProfilPicture>
           </ProfilPictureRow>
           <StyledCol span={18}>
             <Name>Guillaume Paris</Name>
+            <StyledMetier>Photographe</StyledMetier>
             <FullRow>
               <StyledCol span={5}>
                 <Stat>Posts</Stat>
@@ -107,12 +112,17 @@ export default function ProfilPage() {
           </StyledCol>
         </ProfilBackground>
         <GridWrapper>
-        <ReactPictureGrid data={data} showTitle />
+          <ReactPictureGrid data={data} showTitle />
         </GridWrapper>
       </StyledCol>
     </FullRow>
   );
 }
+
+const StyledMetier = styled.div`
+  font-style: italic;
+  font-size: 1.2rem;
+`;
 
 const Stat = styled.div`
   text-align: left;
@@ -171,7 +181,7 @@ const ProfilPictureRow = styled(Row)`
   height: 200px;
   width: 200px;
   margin-top: 100px;
-  margin-top: 20px; 
+  margin-top: 20px;
 `;
 
 const GridWrapper = styled.div`
