@@ -19,3 +19,8 @@ export const searchInput = atom({
   key: "searchInput",
   default: "",
 });
+
+export const tag = atom({
+  key: "tag",
+  default: "art",
+});

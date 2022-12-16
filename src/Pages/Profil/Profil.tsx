@@ -89,7 +89,7 @@ export default function ProfilPage() {
             <ProfilPicture alt="logo" src={profilPic.image} props={profilPic}></ProfilPicture>
           </ProfilPictureRow>
           <StyledCol span={18}>
-            <Name>Uthie-Lisa TEUR</Name>
+            <Name>Guillaume Paris</Name>
             <FullRow>
               <StyledCol span={5}>
                 <Stat>Posts</Stat>

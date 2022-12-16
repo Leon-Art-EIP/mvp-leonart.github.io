@@ -28,7 +28,7 @@ export default function Settings() {
               <ProfilPicture alt="logo" src={profilPic.image} props={profilPic}></ProfilPicture>
             </ProfilPictureRow>
             <Button color="#FFFFFF" background="#2D6A4F">Changer de photo de profil</Button>
-            <Name>Uthie-Lisa TEUR</Name>
+            <Name>Guillaume Paris</Name>
             <Button color="#FFFFFF" background="#2D6A4F">Changer de nom d'utilisateur</Button>
             <Button color="#FFFFFF" background="#b50000">Désactiver mon compte :(</Button>
           </StyledCol>

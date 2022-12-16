@@ -1,146 +1,80 @@
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { searchInput } from "../../SetupRecoil";
+import { searchInput, tag } from "../../SetupRecoil";
 import { Col, Modal, Row, Tooltip } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+type PublicationType = {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  prix: string;
+  type: string;
+};
 
 export default function Home() {
   const filter = useRecoilValue(searchInput);
-  const data = [
-    {
-      id: 1,
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "Description de l'image Nature 01",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 2,
-      image:
-        "https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80",
-      title: "Nature 02",
-      description: "Description de l'image Nature 02",
-      prix: "10 euros",
-    },
-    {
-      id: 3,
-      image:
-        "https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=894&q=80",
-      title: "Nature 03",
-      description: "Description de l'image Nature 03",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 4,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "10 euros",
-    },
-    {
-      id: 5,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 6,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "10 euros",
-    },
-    {
-      id: 7,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 8,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "10 euros",
-    },
-    {
-      id: 9,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 10,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "10 euros",
-    },
-    {
-      id: 11,
-      image:
-        "https://images.unsplash.com/photo-1532040675891-5991e7e3d0cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-      title: "Nature 04",
-      description: "Description de l'image Nature 04",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 12,
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "Description de l'image Nature 01",
-      prix: "10 euros",
-    },
-    {
-      id: 13,
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "Description de l'image Nature 01",
-      prix: "1 000 000 de dollars canadiens",
-    },
-    {
-      id: 14,
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "Description de l'image Nature 01",
-      prix: "10 euros",
-    },
-    {
-      id: 15,
-      image:
-        "https://images.unsplash.com/photo-1475778057357-d35f37fa89dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-      title: "Nature 01",
-      description: "Description de l'image Nature 01",
-      prix: "1 000 000 de dollars canadiens",
-    },
-  ];
+  const defaultPubData: PublicationType[] = [];
+  const [data, setData] = useState(defaultPubData);
+  const thetag = useRecoilValue(tag);
+
+  async function fetchApi(n: number) {
+    let res = await fetch(
+      "https://collectionapi.metmuseum.org/public/collection/v1/objects/" +
+        n.toString()
+    );
+    let data = await res.json();
+    let newobject: PublicationType = {
+      id: n.toString(),
+      image: data.primaryImage,
+      title: data?.creditLine ?? "titre inconnu",
+      description: data?.artistDisplayName ?? "Artiste inconnu",
+      prix: (Math.random() * 1000).toString(),
+      type: Math.random() * 10 > 5 ? "art" : "offer",
+    };
+    console.log(newobject);
+    setData((data) => [...data, newobject]);
+  }
+
+  useEffect(() => {
+    let numbers = [
+      10923, 25965, 45321, 34738, 51234, 61234, 23721, 11893, 29645, 29453,
+      16114, 13453, 61342, 57435, 34254,
+    ];
+    for (const n of numbers) {
+      fetchApi(n);
+    }
+  }, []);
 
   const filtered = filter
-    ? data.filter((element) =>
-        element.title.toLowerCase().includes(filter.toLowerCase())
-      )
-    : data;
+    ? data
+        .filter(
+          (element) => element.type.toLowerCase() === thetag.toLowerCase()
+        )
+        .filter((element) =>
+          element.title.toLowerCase().includes(filter.toLowerCase())
+        )
+    : data.filter(
+        (element) => element.type.toLowerCase() === thetag.toLowerCase()
+      );
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [infoImageOpen, setInfoImageOpen] = useState({image: "", titre: "", prix: "", desc: ""});
+  const [infoImageOpen, setInfoImageOpen] = useState({
+    image: "",
+    titre: "",
+    prix: "",
+    desc: "",
+  });
 
-  const showModal = (image: string, titre: string, prix: string, desc: string) => {
+  const showModal = (
+    image: string,
+    titre: string,
+    prix: string,
+    desc: string
+  ) => {
     setIsModalOpen(true);
-    setInfoImageOpen({image, titre, prix, desc});
+    setInfoImageOpen({ image, titre, prix, desc });
   };
 
   const handleOk = () => {
@@ -158,8 +92,21 @@ export default function Home() {
           <Row justify="space-around">
             {filtered.map((element) => {
               return (
-                <Tooltip key={element.id} title={element.prix + " - " + element.description}>
-                  <PublicationCol span={7} onClick={() => showModal(element.image, element.title, element.prix, element.description)}>
+                <Tooltip
+                  key={element.id}
+                  title={element.prix + " - " + element.description}
+                >
+                  <PublicationCol
+                    span={7}
+                    onClick={() =>
+                      showModal(
+                        element.image,
+                        element.title,
+                        element.prix,
+                        element.description
+                      )
+                    }
+                  >
                     <PublicationTitle>{element.title}</PublicationTitle>
                     <StyledImg
                       alt="publication"
@@ -172,7 +119,13 @@ export default function Home() {
             })}
           </Row>
           <Modal
-            title={infoImageOpen.titre + " - " + infoImageOpen.desc + " - " + infoImageOpen.prix}
+            title={
+              infoImageOpen.titre +
+              " - " +
+              infoImageOpen.desc +
+              " - " +
+              infoImageOpen.prix
+            }
             open={isModalOpen}
             onOk={handleOk}
             onCancel={handleCancel}

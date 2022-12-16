@@ -1,14 +1,17 @@
 import { Row, Col, Switch } from "antd";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import styled from "styled-components";
-import { searchInput } from "../SetupRecoil";
+import { searchInput, tag } from "../SetupRecoil";
 
 export default function Searchbar() {
   const setInput = useSetRecoilState(searchInput);
+  const [thetag, setSwitch] = useRecoilState(tag);
 
   function handleInputOnChange(e: React.ChangeEvent<HTMLInputElement>) {
     setInput(e.target.value);
   }
+
+  console.log(thetag);
 
   return (
     <SearchbarWrapper align="middle" justify="center">
@@ -20,7 +23,9 @@ export default function Searchbar() {
           ></StyledInput>
           <StyledSwitch>
             <StyledSwitchTitle>Projets</StyledSwitchTitle>
-            <Switch />
+            <Switch
+              onChange={() => setSwitch(thetag === "art" ? "offer" : "art")}
+            />
             <StyledSwitchTitle>Offres</StyledSwitchTitle>
           </StyledSwitch>
         </Row>
