@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/mvp-leonart.github.io/static/css/main.e6c13ad2.css",
-    "main.js": "/mvp-leonart.github.io/static/js/main.5e929393.js",
+    "main.js": "/mvp-leonart.github.io/static/js/main.24ccbf9f.js",
     "static/js/787.30325765.chunk.js": "/mvp-leonart.github.io/static/js/787.30325765.chunk.js",
-    "static/media/matteo.png": "/mvp-leonart.github.io/static/media/matteo.fde469076c01d11953e7.png",
     "static/media/image17.png": "/mvp-leonart.github.io/static/media/image17.5e75c4ebd2930ca26437.png",
     "static/media/image16.png": "/mvp-leonart.github.io/static/media/image16.aded8fe60e623f1a38d6.png",
     "static/media/image14.png": "/mvp-leonart.github.io/static/media/image14.78cba00a9d2f811fa3f1.png",
     "static/media/image12.png": "/mvp-leonart.github.io/static/media/image12.d710b751ebcd4238d1ee.png",
-    "static/media/profil.png": "/mvp-leonart.github.io/static/media/profil.2adbdab668ed27fccfbd.png",
+    "static/media/matteo.png": "/mvp-leonart.github.io/static/media/matteo.7188cd20166013b70bb8.png",
+    "static/media/profil.png": "/mvp-leonart.github.io/static/media/profil.7188cd20166013b70bb8.png",
     "static/media/image13.png": "/mvp-leonart.github.io/static/media/image13.ede7fc3409d995242c19.png",
     "static/media/image15.png": "/mvp-leonart.github.io/static/media/image15.b06864ba84b9cb288177.png",
     "index.html": "/mvp-leonart.github.io/index.html",
     "static/media/logo.svg": "/mvp-leonart.github.io/static/media/logo.98f245b83849a66423b1e7fdfc343b7f.svg",
     "main.e6c13ad2.css.map": "/mvp-leonart.github.io/static/css/main.e6c13ad2.css.map",
-    "main.5e929393.js.map": "/mvp-leonart.github.io/static/js/main.5e929393.js.map",
+    "main.24ccbf9f.js.map": "/mvp-leonart.github.io/static/js/main.24ccbf9f.js.map",
     "787.30325765.chunk.js.map": "/mvp-leonart.github.io/static/js/787.30325765.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5e929393.js"
+    "static/js/main.24ccbf9f.js"
   ]
 }
